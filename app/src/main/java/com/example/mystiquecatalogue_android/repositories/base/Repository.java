@@ -1,11 +1,13 @@
 package com.example.mystiquecatalogue_android.repositories.base;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.function.Consumer;
 
 public interface Repository<T> {
-    void getAll(Consumer<List<T>> action);
+    List<T> getAll() throws IOException;
 
-    void add(T item, Consumer<T> action);
+    T add(T item) throws IOException;
 
+    T getById(int id) throws IOException;
 }

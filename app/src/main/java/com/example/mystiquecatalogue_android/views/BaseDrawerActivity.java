@@ -14,7 +14,9 @@ import com.mikepenz.materialdrawer.model.DividerDrawerItem;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 
-public abstract class BaseDrawerActivity extends AppCompatActivity {
+import dagger.android.support.DaggerAppCompatActivity;
+
+public abstract class BaseDrawerActivity extends DaggerAppCompatActivity {
 
 
     private void setupDrawer() {
