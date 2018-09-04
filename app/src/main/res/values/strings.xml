@@ -1,3 +1,35 @@
 <resources>
-    <string name="app_name">MystiqueCatalogue-Android</string>
+    <string name="app_name">WarehouseHulk</string>
+    <string name="warehouse_title">Welcome to Hulk warehouse!</string>
+    <string name="warehouse_address">Address: Sofia 1000, 28 "Ivan Vazov" Str.</string>
+    <string name="phone_nums">tel.: +359 2 981 68 16, +359 888 808 808</string>
+    <string name="contactinfo">Contacts</string>
+    <string name="write_email">Write e-mail</string>
+    <string name="officesmails">officesmails</string>
+    <string name="emails">Orders department: orders@hulk.com\n
+        Delivery department: delivery@hulk.com\n
+        Marketing department: marketing@hulk.com</string>
+    <string name="email_to_send">Department\'s e-mail</string>
+    <string name="subject_to_write">Subject to write</string>
+    <string name="write_your_massage">Write your massage</string>
+    <string name="send">Send</string>
+    <string name="promo_title">Week promotion</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="productlist_title">Product catalogue</string>
+    <string name="drinks">drinks</string>
+    <string name="food">food</string>
+    <string name="domestic">domestics</string>
+    <string name="domestics_list">List Domestics</string>
+    <string name="drinks_list">List Drinks</string>
+    <string name="food_list">List Foods</string>
+    <string name="drinkslist_title">Drinks list</string>
+    <string name="drinks_description">drinks_description</string>
+    <string name="produt_details">product_details</string>
+    <string name="domestic_goods">Domestic goods</string>
+    <string name="food_description">food_description</string>
+    <string name="domestic_description">domestic_description</string>
+    <string name="welcome_title">welcome_title</string>
+
 </resources>
