@@ -1,0 +1,187 @@
+{
+  "project_info": {
+    "project_number": "458746326887",
+    "firebase_url": "https://hulkproducts-6ed43.firebaseio.com",
+    "project_id": "hulkproducts-6ed43",
+    "storage_bucket": "hulkproducts-6ed43.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:458746326887:android:3cc6107bfdd864a0",
+        "android_client_info": {
+          "package_name": "com.example.mystiquecatalogue_android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "458746326887-h6b4qe6cn50alajgk71t0j3gmkkdnta7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mystiquecatalogue_android",
+            "certificate_hash": "f24ab3932a714854c1109cb72f4a4f05691dc441"
+          }
+        },
+        {
+          "client_id": "458746326887-kt7qoa198o1e5qrgaadpabvnqj6aujph.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeX0PwAzMoI9qf7RniVXZeG_59oJVV26k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "458746326887-kt7qoa198o1e5qrgaadpabvnqj6aujph.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:458746326887:android:8ca015820c8dfe83",
+        "android_client_info": {
+          "package_name": "com.example.rt.try2app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "458746326887-drvj6uot8cv7ej4qcre5qoeijm4t80h3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rt.try2app",
+            "certificate_hash": "f24ab3932a714854c1109cb72f4a4f05691dc441"
+          }
+        },
+        {
+          "client_id": "458746326887-kt7qoa198o1e5qrgaadpabvnqj6aujph.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeX0PwAzMoI9qf7RniVXZeG_59oJVV26k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "458746326887-kt7qoa198o1e5qrgaadpabvnqj6aujph.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:458746326887:android:3544c06dd1ef2caf",
+        "android_client_info": {
+          "package_name": "com.example.rt.warehousehulk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "458746326887-8qaodu6uc4p8cunike54n18d5q0gc8i8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rt.warehousehulk",
+            "certificate_hash": "f24ab3932a714854c1109cb72f4a4f05691dc441"
+          }
+        },
+        {
+          "client_id": "458746326887-kt7qoa198o1e5qrgaadpabvnqj6aujph.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeX0PwAzMoI9qf7RniVXZeG_59oJVV26k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "458746326887-kt7qoa198o1e5qrgaadpabvnqj6aujph.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:458746326887:android:b682dc152401b62d",
+        "android_client_info": {
+          "package_name": "com.pavlovarayna.warehousehulkapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "458746326887-94ai9g05bv8pgce0t6hg1vjag25gffjv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pavlovarayna.warehousehulkapplication",
+            "certificate_hash": "f24ab3932a714854c1109cb72f4a4f05691dc441"
+          }
+        },
+        {
+          "client_id": "458746326887-kt7qoa198o1e5qrgaadpabvnqj6aujph.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCeX0PwAzMoI9qf7RniVXZeG_59oJVV26k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "458746326887-kt7qoa198o1e5qrgaadpabvnqj6aujph.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

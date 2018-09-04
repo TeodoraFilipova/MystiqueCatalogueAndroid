@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.products.ProductActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="80dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/drawer_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            />
+
+        <TextView
+            android:id="@+id/tw_titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="23dp"
+            android:text="@string/productlist_title"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:ignore="RelativeOverlap"
+            android:layout_below="@id/drawer_toolbar"/>
+
+        <ImageView
+            android:id="@+id/img_drinks"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="62dp"
+            android:layout_marginTop="79dp"
+            android:contentDescription="@string/drinks_description"
+            android:src="@drawable/softdrinks" />
+
+        <Button
+            android:id="@+id/btn_drinks"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="93dp"
+            android:text="@string/drinks" />
+
+
+        <ImageView
+            android:id="@+id/img_food"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/img_drinks"
+            android:layout_marginTop="211dp"
+            android:contentDescription="@string/food_description"
+            android:src="@drawable/food" />
+
+        <Button
+            android:id="@+id/btn_food"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/btn_drinks"
+            android:layout_marginTop="223dp"
+            android:text="@string/food" />
+
+
+        <ImageView
+            android:id="@+id/img_domestics"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/img_drinks"
+            android:layout_marginBottom="138dp"
+            android:contentDescription="@string/domestic_description"
+            android:src="@drawable/domestics" />
+
+        <Button
+            android:id="@+id/btn_domestics"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/btn_drinks"
+            android:layout_marginBottom="152dp"
+            android:text="@string/domestic" />
+
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
