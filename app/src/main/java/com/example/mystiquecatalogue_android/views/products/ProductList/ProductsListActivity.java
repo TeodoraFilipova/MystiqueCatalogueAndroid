@@ -9,22 +9,29 @@ import com.example.mystiquecatalogue_android.models.Product;
 import com.example.mystiquecatalogue_android.views.BaseDrawerActivity;
 import com.example.mystiquecatalogue_android.views.products.ProductDetails.ProductDetailsActivity;
 
+import javax.inject.Inject;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 
 public class ProductsListActivity extends BaseDrawerActivity implements ProductsListContracts.Navigator {
 
     public static final long IDENTIFIER = 2;
 
-    private Toolbar mToolbar;
-    private ProductsListFragment mProductsListFragment;
+    @BindView(R.id.drawer_toolbar)
+    Toolbar mToolbar;
+
+    @Inject
+    ProductsListFragment mProductsListFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_products_list);
 
-        mToolbar = findViewById(R.id.drawer_toolbar);
+        ButterKnife.bind(this);
 
-        mProductsListFragment = ProductsListFragment.newInstance();
         mProductsListFragment.setNavigator(this);
 
         getFragmentManager().beginTransaction()

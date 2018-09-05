@@ -5,9 +5,27 @@
     android:layout_height="match_parent"
     tools:context=".views.products.ProductList.ProductsListFragment">
 
-    <ListView
-        android:id="@+id/lv_products"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
 
+        <ProgressBar
+            android:id="@+id/loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/et_filter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter to search" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/lv_products"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/et_filter"
+            android:visibility="gone" />
+    </RelativeLayout>
 </FrameLayout>
