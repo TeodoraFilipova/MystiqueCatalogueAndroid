@@ -2,6 +2,7 @@ package com.example.mystiquecatalogue_android.diconfig;
 
 import android.app.Application;
 
+import com.example.mystiquecatalogue_android.validatorss.ProductValidator;
 import com.example.mystiquecatalogue_android.views.AndroidApplication;
 
 import dagger.BindsInstance;
@@ -21,6 +22,7 @@ import javax.inject.Singleton;
             ProductDetailsModule.class,
             RepositoriesModule.class,
             ServicesModule.class,
+            ProductValidator.class,
             ViewsModule.class,
             AndroidSupportInjectionModule.class})
     public interface AppComponent extends AndroidInjector<AndroidApplication> {
