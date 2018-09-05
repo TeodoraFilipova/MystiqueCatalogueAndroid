@@ -23,6 +23,7 @@ public class ProductsListActivity extends BaseDrawerActivity implements Products
         mToolbar = findViewById(R.id.drawer_toolbar);
 
         mProductsListFragment = ProductsListFragment.newInstance();
+        mProductsListFragment.setNavigator(this);
 
         getFragmentManager().beginTransaction()
                 .replace(R.id.content, mProductsListFragment)

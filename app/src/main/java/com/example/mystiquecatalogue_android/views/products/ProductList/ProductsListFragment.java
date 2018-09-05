@@ -7,18 +7,24 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
 import com.example.mystiquecatalogue_android.R;
 import com.example.mystiquecatalogue_android.models.Product;
-import com.example.mystiquecatalogue_android.uiutils.Navigator;
 
 import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class ProductsListFragment extends Fragment implements ProductsListContracts.View{
-    private Navigator mNavigator;
+    private ProductsListContracts.Navigator mNavigator;
+
+    @BindView(R.id.lv_products)
+    ListView mProductsListView;
 
     public ProductsListFragment() {
         // Required empty public constructor
@@ -30,7 +36,7 @@ public class ProductsListFragment extends Fragment implements ProductsListContra
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_products_list, container, false);
 
-
+        ButterKnife.bind(this, view);
 
         return view;
     }
@@ -39,9 +45,10 @@ public class ProductsListFragment extends Fragment implements ProductsListContra
         return new ProductsListFragment();
     }
 
-    public void setNavigator(Navigator navigator) {
-        this.mNavigator = navigator;
+    void setNavigator(ProductsListContracts.Navigator navigator) {
+        mNavigator = navigator;
     }
+
 
     @Override
     public void setPresenter(ProductsListContracts.Presenter presenter) {
