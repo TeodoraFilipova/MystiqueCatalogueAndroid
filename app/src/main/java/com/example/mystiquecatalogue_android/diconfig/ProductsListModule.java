@@ -3,7 +3,6 @@ package com.example.mystiquecatalogue_android.diconfig;
 
 
 import com.example.mystiquecatalogue_android.views.products.ProductList.ProductsListContracts;
-import com.example.mystiquecatalogue_android.views.products.ProductList.ProductsListFragment;
 import com.example.mystiquecatalogue_android.views.products.ProductList.ProductsListPresenter;
 
 import dagger.Binds;
