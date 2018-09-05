@@ -6,5 +6,13 @@ public class Constants {
     //todo put constants to all fields
     public static final int PRODUCT_NAME_MIN_LENGHT = 3;
     public static final int PRODUCT_NAME_MAX_LENGHT = 50;
+    public static final int PRODUCT_CATEGORY_MIN_LENGHT = 3;
+    public static final int PRODUCT_CATEGORY_MAX_LENGHT = 30;
+    public static final int PRODUCT_TYPE_MIN_LENGHT = 3;
+    public static final int PRODUCT_TYPE_MAX_LENGHT = 30;
+    public static final int PRODUCT_UNITS_MIN_LENGHT = 1;
+    public static final int PRODUCT_UNITS_MAX_LENGHT = 20;
+
+
 
 }
