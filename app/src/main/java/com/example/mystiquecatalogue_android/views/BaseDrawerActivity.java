@@ -7,7 +7,7 @@ import android.view.View;
 
 
 import com.example.mystiquecatalogue_android.views.contacts.ContactsActivity;
-import com.example.mystiquecatalogue_android.views.products.ProductActivity;
+import com.example.mystiquecatalogue_android.views.products.ProductList.ProductsListActivity;
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.model.DividerDrawerItem;
@@ -17,13 +17,13 @@ import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 public abstract class BaseDrawerActivity extends AppCompatActivity {
 
 
-    private void setupDrawer() {
+    public void setupDrawer() {
         //if you want to update the items at a later timeit is recommended to keep it in a variable
         PrimaryDrawerItem mainItem = new PrimaryDrawerItem()
                 .withIdentifier(MainActivity.IDENTIFIER)
                 .withName("Main Page");
         PrimaryDrawerItem listProductItem = new PrimaryDrawerItem()
-                .withIdentifier(ProductActivity.IDENTIFIER)
+                .withIdentifier(ProductsListActivity.IDENTIFIER)
                 .withName("Products Catalogue");
         /*PrimaryDrawerItem promotionItem = new PrimaryDrawerItem()
                 .withIdentifier(PromotionActivity.IDENTIFIER)
@@ -73,9 +73,9 @@ public abstract class BaseDrawerActivity extends AppCompatActivity {
             return  new Intent(
                     BaseDrawerActivity.this, MainActivity.class
             );
-        } else if (identifier == ProductActivity.IDENTIFIER) {
+        } else if (identifier == ProductsListActivity.IDENTIFIER) {
             return  new Intent(
-                    BaseDrawerActivity.this, ProductActivity.class
+                    BaseDrawerActivity.this, ProductsListActivity.class
             );
         } /*else if (identifier == PromotionActivity.IDENTIFIER) {
             return  new Intent(
