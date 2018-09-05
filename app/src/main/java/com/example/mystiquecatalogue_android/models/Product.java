@@ -1,13 +1,16 @@
 package com.example.mystiquecatalogue_android.models;
 
-public class Product {
-    private String name;
-    private String category;
-    private int id;
-    private String type;
-    private String units;
-    private int size;
-    private int number;
+import java.io.Serializable;
+
+public class Product implements Serializable {
+    public String imageUrl;
+    public String name;
+    public String category;
+    public int id;
+    public String type;
+    public String units;
+    public int size;
+    public int number;
 
     public Product() {
         //empty constructor
@@ -77,5 +80,13 @@ public class Product {
 
     public void setNumber(int number) {
         this.number = number;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 }

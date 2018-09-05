@@ -1,11 +1,13 @@
 package com.example.mystiquecatalogue_android.views.products.ProductList;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 
 import com.example.mystiquecatalogue_android.R;
 import com.example.mystiquecatalogue_android.models.Product;
 import com.example.mystiquecatalogue_android.views.BaseDrawerActivity;
+import com.example.mystiquecatalogue_android.views.products.ProductDetails.ProductDetailsActivity;
 
 
 public class ProductsListActivity extends BaseDrawerActivity implements ProductsListContracts.Navigator {
@@ -43,6 +45,8 @@ public class ProductsListActivity extends BaseDrawerActivity implements Products
 
     @Override
     public void navigateWith(Product product) {
-        //TODO implement
+        Intent intent = new Intent(this, ProductDetailsActivity.class);
+        intent.putExtra(ProductDetailsActivity.EXTRA_KEY, product);
+        startActivity(intent);
     }
 }

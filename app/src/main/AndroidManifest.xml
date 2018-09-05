@@ -32,6 +32,8 @@
             tools:ignore="InnerclassSeparator" />
         <activity android:name=".views.products.Food.FoodDetailsActivity"
             tools:ignore="InnerclassSeparator" />
+        <activity android:name=".views.products.ProductDetails.ProductDetailsActivity"
+            tools:ignore="InnerclassSeparator" />
         <activity android:name=".views.products.Domestics.DomesticDetailsActivity"
             tools:ignore="InnerclassSeparator" />
     </application>
