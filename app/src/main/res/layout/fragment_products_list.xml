@@ -10,13 +10,13 @@
         android:layout_height="match_parent">
 
         <ProgressBar
-            android:id="@+id/loading"
+            android:id="@+id/loading_bar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:visibility="gone" />
 
         <EditText
-            android:id="@+id/et_filter"
+            android:id="@+id/et_filter_search"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter to search" />
@@ -25,7 +25,7 @@
             android:id="@+id/lv_products"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/et_filter"
+            android:layout_below="@id/et_filter_search"
             android:visibility="gone" />
     </RelativeLayout>
 </FrameLayout>
