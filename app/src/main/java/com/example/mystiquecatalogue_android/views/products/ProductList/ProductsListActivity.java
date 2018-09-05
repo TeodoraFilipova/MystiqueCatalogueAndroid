@@ -15,15 +15,19 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
-public class ProductsListActivity extends BaseDrawerActivity implements ProductsListContracts.Navigator {
+public class ProductsListActivity extends BaseDrawerActivity
+        implements ProductsListContracts.Navigator {
 
     public static final long IDENTIFIER = 2;
 
-    @BindView(R.id.drawer_toolbar)
-    Toolbar mToolbar;
-
     @Inject
     ProductsListFragment mProductsListFragment;
+
+    @Inject
+    ProductsListContracts.Presenter mPresenter;
+
+    @BindView(R.id.drawer_toolbar)
+    Toolbar mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +36,10 @@ public class ProductsListActivity extends BaseDrawerActivity implements Products
 
         ButterKnife.bind(this);
 
+        setSupportActionBar(mToolbar);
+
         mProductsListFragment.setNavigator(this);
+        mProductsListFragment.setPresenter(mPresenter);
 
         getFragmentManager().beginTransaction()
                 .replace(R.id.content, mProductsListFragment)
