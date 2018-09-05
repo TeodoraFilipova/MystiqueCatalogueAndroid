@@ -15,5 +15,5 @@ public abstract class ProductDetailsModule {
 
     @ActivityScoped
     @Binds
-    abstract ProductDetailsContracts.Presenter Presenter(ProductDetailsPresenter presenter);
+    abstract ProductDetailsContracts.Presenter productDetailsPresenter(ProductDetailsPresenter presenter);
 }
