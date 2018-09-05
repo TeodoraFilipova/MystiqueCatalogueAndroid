@@ -6,10 +6,16 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.mystiquecatalogue_android.R;
 import com.example.mystiquecatalogue_android.models.Product;
+
+import javax.inject.Inject;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 
 /**
@@ -19,6 +25,30 @@ public class ProductDetailsFragment extends Fragment implements ProductDetailsCo
     private String mFood;
     private TextView mFoodDetailsTextView;
 
+    private ProductDetailsContracts.Presenter mPresenter;
+
+    @BindView(R.id.tv_details_name)
+    TextView mDetailsNameTextView;
+
+    @BindView(R.id.tv_details_category)
+    TextView mDetailsCategoryTextView;
+
+    @BindView(R.id.tv_details_type)
+    TextView mDetailsTypeTextView;
+
+    @BindView(R.id.tv_details_units)
+    TextView mDetailsUnitsTextView;
+
+    @BindView(R.id.tv_details_size)
+    TextView mDetailsSizeTextView;
+
+    @BindView(R.id.tv_details_number)
+    TextView mDetailsNumberTextView;
+
+    @BindView(R.id.iv_details_pic)
+    ImageView mDetailsProductImageView;
+
+    @Inject
     public ProductDetailsFragment() {
         // Required empty public constructor
     }
@@ -30,30 +60,34 @@ public class ProductDetailsFragment extends Fragment implements ProductDetailsCo
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_food_details, container, false);
 
-        mFoodDetailsTextView = view.findViewById(R.id.tv_foodDetails);
-        mFoodDetailsTextView.setText(mFood);
+        ButterKnife.bind(this, view);
 
         return view;
     }
 
-    public static ProductDetailsFragment newInstance() { return new ProductDetailsFragment();
+    @Override
+    public void onResume() {
+        super.onResume();
+        mPresenter.subscribe(this);
+        mPresenter.loadProduct();
     }
 
-    public void setFood(String food) {
-        this.mFood = food;
-        if (mFoodDetailsTextView == null){
-            return;
-        }
-        mFoodDetailsTextView.setText(food);
-    }
+
 
     @Override
     public void showProduct(Product product) {
+        mDetailsNameTextView.setText(product.getName());
+        mDetailsCategoryTextView.setText(product.getCategory());
+        mDetailsTypeTextView.setText(product.getType());
+        mDetailsUnitsTextView.setText(product.getUnits());
+        mDetailsSizeTextView.setText(product.getSize());
+        mDetailsNumberTextView.setText(product.getNumber());
 
     }
 
     @Override
     public void setPresenter(ProductDetailsContracts.Presenter presenter) {
+        mPresenter = presenter;
 
     }
 

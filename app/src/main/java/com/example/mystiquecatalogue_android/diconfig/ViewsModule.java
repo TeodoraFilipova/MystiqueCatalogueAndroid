@@ -1,6 +1,7 @@
 package com.example.mystiquecatalogue_android.diconfig;
 
 import android.content.Context;
+import android.support.v7.widget.RecyclerView;
 import android.widget.ArrayAdapter;
 
 import com.example.mystiquecatalogue_android.models.Product;
@@ -13,8 +14,8 @@ import dagger.Provides;
 public class ViewsModule {
 
     @Provides
-    public ArrayAdapter<Product> productArrayAdapter(Context context){
-        return new ProductsAdapter(context);
+    public RecyclerView.Adapter<ProductsAdapter.ProductViewHolder> productArrayAdapter(Context context){
+        return new ProductsAdapter();
     }
 
 

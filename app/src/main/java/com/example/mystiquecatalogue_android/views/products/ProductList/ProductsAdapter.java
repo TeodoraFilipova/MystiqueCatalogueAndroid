@@ -1,5 +1,6 @@
 package com.example.mystiquecatalogue_android.views.products.ProductList;
 
+import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -31,6 +32,9 @@ public class ProductsAdapter
         mProducts = new ArrayList<>();
     }
 
+    public ProductsAdapter(Context context) {
+    }
+
     @NonNull
     @Override
     public ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -43,8 +47,6 @@ public class ProductsAdapter
         view.setMinimumHeight(height);
         return new ProductViewHolder(view);
     }
-
-
 
     @Override
     public void onBindViewHolder(@NonNull ProductViewHolder holder, int position) {
