@@ -42,7 +42,8 @@
         <activity
             android:name=".views.products.Domestics.DomesticDetailsActivity"
             tools:ignore="InnerclassSeparator" />
-        <activity android:name=".views.products.DrinksList.DrinksListActivity"></activity>
+        <activity android:name=".views.products.DrinksList.DrinksListActivity" />
+        <activity android:name=".views.products.DomesticList.DomesticListActivity"></activity>
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package com.example.mystiquecatalogue_android.views.products.DrinksList;
+package com.example.mystiquecatalogue_android.views.products.DomesticList;
 
 
 import android.app.Fragment;
@@ -26,10 +26,10 @@ import butterknife.OnTextChanged;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class DrinksListFragment extends Fragment implements DrinksListContracts.View,
-        DrinksAdapter.OnDrinkClickListener {
+public class DomesticListFragment extends Fragment
+        implements DomesticListContracts.View, DomesticAdapter.OnDomesticClickListener {
 
-    private DrinksListContracts.Navigator mNavigator;
+    private DomesticListContracts.Navigator mNavigator;
 
     @BindView(R.id.loading_bar)
     ProgressBar mLoadingBar;
@@ -37,33 +37,34 @@ public class DrinksListFragment extends Fragment implements DrinksListContracts.
     @BindView(R.id.et_filter_search)
     EditText mEditSearchText;
 
-    @BindView(R.id.lv_drinks)
-    RecyclerView mDrinksView;
+    @BindView(R.id.lv_domestic)
+    RecyclerView mDomesticView;
 
     @Inject
-    DrinksAdapter mDrinksAdapter;
+    DomesticAdapter mDomesticAdapter;
 
-    private DrinksListContracts.Presenter mPresenter;
+    private DomesticListContracts.Presenter mPresenter;
     private GridLayoutManager mProductsViewLayoutManager;
 
     @Inject
-    public DrinksListFragment() {
+    public DomesticListFragment() {
         // Required empty public constructor
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_drinks_list, container, false);
+        View view = inflater.inflate(R.layout.fragment_domestic_list, container, false);
 
         ButterKnife.bind(this, view);
 
-        mDrinksAdapter.setOnDrinkClickListener(this);
-        mDrinksView.setAdapter(mDrinksAdapter);
+        mDomesticAdapter.setOnDomesticClickListener(this);
+        mDomesticView.setAdapter(mDomesticAdapter);
 
         mProductsViewLayoutManager = new GridLayoutManager(getContext(), 2);
-        mDrinksView.setLayoutManager(mProductsViewLayoutManager);
+        mDomesticView.setLayoutManager(mProductsViewLayoutManager);
 
         return view;
     }
@@ -75,27 +76,24 @@ public class DrinksListFragment extends Fragment implements DrinksListContracts.
         mPresenter.loadProducts();
     }
 
-    public void setNavigator(DrinksListContracts.Navigator navigator) {
-        this.mNavigator = navigator;
-    }
-
     @Override
-    public void setPresenter(DrinksListContracts.Presenter presenter) {
+    public void setPresenter(DomesticListContracts.Presenter presenter) {
         mPresenter = presenter;
     }
 
     @Override
     public void showProducts(List<Product> products) {
-        mDrinksAdapter.clear();
-        mDrinksAdapter.addAll(products);
-        mDrinksAdapter.notifyDataSetChanged();
+        mDomesticAdapter.clear();
+        mDomesticAdapter.addAll(products);
+        mDomesticAdapter.notifyDataSetChanged();
     }
 
     @Override
     public void showEmptyProductsList() {
-        mDrinksAdapter.clear();
-        mDrinksAdapter.notifyDataSetChanged();
-        Toast.makeText(getContext(),"No drinks available to show!", Toast.LENGTH_LONG)
+        mDomesticAdapter.clear();
+        mDomesticAdapter.notifyDataSetChanged();
+        Toast.makeText(getContext(),"No domestic products available to show!",
+                Toast.LENGTH_LONG)
                 .show();
     }
 
@@ -107,13 +105,13 @@ public class DrinksListFragment extends Fragment implements DrinksListContracts.
 
     @Override
     public void showLoading() {
-        mDrinksView.setVisibility(View.GONE);
+        mDomesticView.setVisibility(View.GONE);
         mLoadingBar.setVisibility(View.VISIBLE);
     }
 
     @Override
     public void hideLoading() {
-        mDrinksView.setVisibility(View.VISIBLE);
+        mDomesticView.setVisibility(View.VISIBLE);
         mLoadingBar.setVisibility(View.GONE);
     }
 
@@ -122,9 +120,13 @@ public class DrinksListFragment extends Fragment implements DrinksListContracts.
         mNavigator.navigateWith(product);
     }
 
+    public void setNavigator(DomesticListContracts.Navigator navigator) {
+        this.mNavigator = navigator;
+    }
+
     @Override
-    public void onClick(Product drink) {
-        mPresenter.selectProduct(drink);
+    public void onClick(Product domestic) {
+        mPresenter.selectProduct(domestic);
     }
 
     @OnTextChanged(R.id.et_filter_search)
