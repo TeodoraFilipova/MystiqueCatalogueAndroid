@@ -28,17 +28,15 @@ public class ProductDetailsActivity extends BaseDrawerActivity {
     ProductDetailsContracts.Presenter mProductDetailsPresenter;
 
 
-    private TextView mView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_details);
 
+        ButterKnife.bind(this);
+
         Intent intent = getIntent();
         Product product = (Product) intent.getSerializableExtra(ProductDetailsActivity.EXTRA_KEY);
-
-        ButterKnife.bind(this);
 
         setSupportActionBar(getToolbar());
 

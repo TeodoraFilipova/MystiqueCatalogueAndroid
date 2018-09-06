@@ -23,9 +23,6 @@ import butterknife.ButterKnife;
  * A simple {@link Fragment} subclass.
  */
 public class ProductDetailsFragment extends Fragment implements ProductDetailsContracts.View {
-    private String mFood;
-    private TextView mFoodDetailsTextView;
-
     private ProductDetailsContracts.Presenter mPresenter;
 
     @BindView(R.id.tv_details_name)
@@ -82,8 +79,8 @@ public class ProductDetailsFragment extends Fragment implements ProductDetailsCo
         mDetailsCategoryTextView.setText(product.getCategory());
         mDetailsTypeTextView.setText(product.getType());
         mDetailsUnitsTextView.setText(product.getUnits());
-        mDetailsSizeTextView.setText(product.getSize());
-        mDetailsNumberTextView.setText(product.getNumber());
+        mDetailsSizeTextView.setText(String.valueOf(product.getSize()));
+        mDetailsNumberTextView.setText(String.valueOf(product.getNumber()));
         Picasso.get()
                 .load(product.getImageUrl())
                 .into(mDetailsProductImageView);
