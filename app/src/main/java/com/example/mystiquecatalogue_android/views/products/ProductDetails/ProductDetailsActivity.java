@@ -17,16 +17,16 @@ import butterknife.ButterKnife;
 
 
 public class ProductDetailsActivity extends BaseDrawerActivity {
+
+    public static final long IDENTIFIER = 3;
     public static final String EXTRA_KEY = "PRODUCT_EXTRA_KEY";
 
     @Inject
     ProductDetailsFragment mProductDetailsFragment;
 
     @Inject
-    ProductDetailsContracts.Presenter mSuperheroDetailsPresenter;
+    ProductDetailsContracts.Presenter mProductDetailsPresenter;
 
-    @BindView(R.id.drawer_toolbar)
-    Toolbar mToolbar;
 
     private TextView mView;
 
@@ -40,6 +40,11 @@ public class ProductDetailsActivity extends BaseDrawerActivity {
 
         ButterKnife.bind(this);
 
+        setSupportActionBar(getToolbar());
+
+        mProductDetailsPresenter.setProductId(product.getId());
+        mProductDetailsFragment.setPresenter(mProductDetailsPresenter);
+
         getFragmentManager()
                 .beginTransaction()
                 .replace(R.id.context, mProductDetailsFragment)
@@ -49,11 +54,8 @@ public class ProductDetailsActivity extends BaseDrawerActivity {
 
     @Override
     protected long getIdentifier() {
-        return 0;
+        return IDENTIFIER;
     }
 
-    @Override
-    protected Toolbar getDrawerToolbar() {
-        return mToolbar;
-    }
+
 }

@@ -26,8 +26,7 @@ public class ProductsListActivity extends BaseDrawerActivity
     @Inject
     ProductsListContracts.Presenter mPresenter;
 
-    @BindView(R.id.drawer_toolbar)
-    Toolbar mToolbar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +35,7 @@ public class ProductsListActivity extends BaseDrawerActivity
 
         ButterKnife.bind(this);
 
-        setSupportActionBar(mToolbar);
+        setSupportActionBar(getToolbar());
 
         mProductsListFragment.setNavigator(this);
         mProductsListFragment.setPresenter(mPresenter);
@@ -52,10 +51,6 @@ public class ProductsListActivity extends BaseDrawerActivity
         return IDENTIFIER;
     }
 
-    @Override
-    protected Toolbar getDrawerToolbar() {
-        return mToolbar;
-    }
 
     @Override
     public void navigateWith(Product product) {

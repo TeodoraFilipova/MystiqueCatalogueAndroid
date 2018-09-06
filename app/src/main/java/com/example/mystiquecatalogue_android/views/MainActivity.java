@@ -7,18 +7,21 @@ import android.support.v7.widget.Toolbar;
 import com.example.mystiquecatalogue_android.R;
 import com.example.mystiquecatalogue_android.views.BaseDrawerActivity;
 
+import butterknife.ButterKnife;
+
 
 public class MainActivity extends BaseDrawerActivity {
 
     public static final long IDENTIFIER = 1;
-    private Toolbar mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mToolbar = findViewById(R.id.drawer_toolbar);
+        ButterKnife.bind(this);
+
+        setSupportActionBar(getToolbar());
     }
 
     @Override
@@ -26,8 +29,4 @@ public class MainActivity extends BaseDrawerActivity {
         return IDENTIFIER;
     }
 
-    @Override
-    protected Toolbar getDrawerToolbar() {
-        return mToolbar;
-    }
 }

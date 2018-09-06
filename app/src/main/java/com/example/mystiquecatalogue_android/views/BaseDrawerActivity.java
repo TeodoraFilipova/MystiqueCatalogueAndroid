@@ -6,7 +6,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 
+import com.example.mystiquecatalogue_android.R;
 import com.example.mystiquecatalogue_android.views.contacts.ContactsActivity;
+import com.example.mystiquecatalogue_android.views.products.DrinksList.DrinksListActivity;
 import com.example.mystiquecatalogue_android.views.products.ProductList.ProductsListActivity;
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
@@ -14,9 +16,17 @@ import com.mikepenz.materialdrawer.model.DividerDrawerItem;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 
+import butterknife.BindView;
 import dagger.android.support.DaggerAppCompatActivity;
 
 public abstract class BaseDrawerActivity extends DaggerAppCompatActivity {
+
+    @BindView(R.id.drawer_toolbar)
+    Toolbar mToolbar;
+
+    public BaseDrawerActivity() {
+
+    }
 
 
     public void setupDrawer() {
@@ -26,10 +36,10 @@ public abstract class BaseDrawerActivity extends DaggerAppCompatActivity {
                 .withName("Main Page");
         PrimaryDrawerItem listProductItem = new PrimaryDrawerItem()
                 .withIdentifier(ProductsListActivity.IDENTIFIER)
-                .withName("Products Catalogue");
-        /*PrimaryDrawerItem promotionItem = new PrimaryDrawerItem()
-                .withIdentifier(PromotionActivity.IDENTIFIER)
-                .withName("Week Promotion");*/
+                .withName("All Products");
+        PrimaryDrawerItem drinksItem = new PrimaryDrawerItem()
+                .withIdentifier(DrinksListActivity.IDENTIFIER)
+                .withName("Drinks");
         PrimaryDrawerItem contactItem = new PrimaryDrawerItem()
                 .withIdentifier(ContactsActivity.IDENTIFIER)
                 .withName("Contacts");
@@ -37,13 +47,13 @@ public abstract class BaseDrawerActivity extends DaggerAppCompatActivity {
         //create the drawer and remember the `Drawer` result object
         DrawerBuilder drawerBuilder = new DrawerBuilder();
         drawerBuilder.withActivity(this);
-        drawerBuilder.withToolbar(getDrawerToolbar());
+        drawerBuilder.withToolbar(mToolbar);
         drawerBuilder.addDrawerItems(
                 mainItem,
                 new DividerDrawerItem(),
                 listProductItem,
-               /* new DividerDrawerItem(),
-                promotionItem,*/
+                new DividerDrawerItem(),
+                drinksItem,
                 new DividerDrawerItem(),
                 contactItem
         );
@@ -69,7 +79,6 @@ public abstract class BaseDrawerActivity extends DaggerAppCompatActivity {
         Drawer drawer = drawerBuilder.build();
     }
 
-
     private Intent getNextIntent(long identifier) {
         if (identifier == MainActivity.IDENTIFIER) {
             return  new Intent(
@@ -79,11 +88,11 @@ public abstract class BaseDrawerActivity extends DaggerAppCompatActivity {
             return  new Intent(
                     BaseDrawerActivity.this, ProductsListActivity.class
             );
-        } /*else if (identifier == PromotionActivity.IDENTIFIER) {
+        } else if (identifier == DrinksListActivity.IDENTIFIER) {
             return  new Intent(
-                    BaseDrawerActivity.this, PromotionActivity.class
+                    BaseDrawerActivity.this, DrinksListActivity.class
             );
-        }*/ else if (identifier == ContactsActivity.IDENTIFIER) {
+        } else if (identifier == ContactsActivity.IDENTIFIER) {
             return  new Intent(
                     BaseDrawerActivity.this, ContactsActivity.class
             );
@@ -93,7 +102,9 @@ public abstract class BaseDrawerActivity extends DaggerAppCompatActivity {
 
     protected abstract long getIdentifier();
 
-    protected abstract Toolbar getDrawerToolbar();
+    public Toolbar getToolbar() {
+        return mToolbar;
+    }
 
     @Override
     protected void onStart() {

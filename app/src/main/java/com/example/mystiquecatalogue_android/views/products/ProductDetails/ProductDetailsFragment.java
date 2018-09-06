@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.example.mystiquecatalogue_android.R;
 import com.example.mystiquecatalogue_android.models.Product;
+import com.squareup.picasso.Picasso;
 
 import javax.inject.Inject;
 
@@ -48,6 +49,7 @@ public class ProductDetailsFragment extends Fragment implements ProductDetailsCo
     @BindView(R.id.iv_details_pic)
     ImageView mDetailsProductImageView;
 
+
     @Inject
     public ProductDetailsFragment() {
         // Required empty public constructor
@@ -58,7 +60,7 @@ public class ProductDetailsFragment extends Fragment implements ProductDetailsCo
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_food_details, container, false);
+        View view = inflater.inflate(R.layout.fragment_product_details, container, false);
 
         ButterKnife.bind(this, view);
 
@@ -82,6 +84,9 @@ public class ProductDetailsFragment extends Fragment implements ProductDetailsCo
         mDetailsUnitsTextView.setText(product.getUnits());
         mDetailsSizeTextView.setText(product.getSize());
         mDetailsNumberTextView.setText(product.getNumber());
+        Picasso.get()
+                .load(product.getImageUrl())
+                .into(mDetailsProductImageView);
 
     }
 

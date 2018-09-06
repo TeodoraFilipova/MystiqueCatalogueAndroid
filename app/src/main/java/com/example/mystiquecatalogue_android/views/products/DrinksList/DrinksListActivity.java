@@ -28,8 +28,7 @@ public class DrinksListActivity extends BaseDrawerActivity
     @Inject
     DrinksListContracts.Presenter mPresenter;
 
-    @BindView(R.id.drawer_toolbar)
-    Toolbar mToolbar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +37,7 @@ public class DrinksListActivity extends BaseDrawerActivity
 
         ButterKnife.bind(this);
 
-        setSupportActionBar(mToolbar);
+        setSupportActionBar(getToolbar());
 
         mDrinksListFragment.setNavigator(this);
         mDrinksListFragment.setPresenter(mPresenter);
@@ -52,11 +51,6 @@ public class DrinksListActivity extends BaseDrawerActivity
     @Override
     protected long getIdentifier() {
         return IDENTIFIER;
-    }
-
-    @Override
-    protected Toolbar getDrawerToolbar() {
-        return mToolbar;
     }
 
     @Override

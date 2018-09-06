@@ -6,8 +6,10 @@ import com.example.mystiquecatalogue_android.views.products.ProductDetails.Produ
 import com.example.mystiquecatalogue_android.views.products.ProductDetails.ProductDetailsPresenter;
 
 import dagger.Binds;
+import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
 
+@Module
 public abstract class ProductDetailsModule {
     @FragmentScoped
     @ContributesAndroidInjector

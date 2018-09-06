@@ -10,11 +10,12 @@ import javax.inject.Singleton;
 import dagger.Module;
 import dagger.Provides;
 
+
 @Module
 public class ValidatorsModule {
     @Provides
     @Singleton
-    public Validator<Product> superheroValidator() {
+    public Validator<Product> productValidator() {
         return new ProductValidator();
     }
 }

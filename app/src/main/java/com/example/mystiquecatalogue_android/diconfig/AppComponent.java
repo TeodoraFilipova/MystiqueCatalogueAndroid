@@ -16,13 +16,15 @@ import javax.inject.Singleton;
     @Component(modules = {
             ActivityBindingModule.class,
             AppModule.class,
+            AsyncModule.class,
             HttpModule.class,
             ParsersModule.class,
             ProductsListModule.class,
             ProductDetailsModule.class,
+            DrinksListModule.class,
             RepositoriesModule.class,
             ServicesModule.class,
-            ProductValidator.class,
+            ValidatorsModule.class,
             ViewsModule.class,
             AndroidSupportInjectionModule.class})
     public interface AppComponent extends AndroidInjector<AndroidApplication> {

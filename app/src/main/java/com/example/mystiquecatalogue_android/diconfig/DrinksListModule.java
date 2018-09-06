@@ -7,8 +7,10 @@ import com.example.mystiquecatalogue_android.views.products.ProductList.Products
 import com.example.mystiquecatalogue_android.views.products.ProductList.ProductsListPresenter;
 
 import dagger.Binds;
+import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
 
+@Module
 public abstract class DrinksListModule {
     @FragmentScoped
     @ContributesAndroidInjector

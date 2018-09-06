@@ -1,14 +1,14 @@
 <resources>
-    <string name="app_name">WarehouseHulk</string>
-    <string name="warehouse_title">Welcome to Hulk warehouse!</string>
+    <string name="app_name">MystiqueCatalogue</string>
+    <string name="warehouse_title">Welcome to Mystique Shop!</string>
     <string name="warehouse_address">Address: Sofia 1000, 28 "Ivan Vazov" Str.</string>
     <string name="phone_nums">tel.: +359 2 981 68 16, +359 888 808 808</string>
     <string name="contactinfo">Contacts</string>
     <string name="write_email">Write e-mail</string>
     <string name="officesmails">officesmails</string>
-    <string name="emails">Orders department: orders@hulk.com\n
-        Delivery department: delivery@hulk.com\n
-        Marketing department: marketing@hulk.com</string>
+    <string name="emails">Orders department: orders@mystiqueshop.com\n
+        Delivery department: delivery@mystiqueshop.com\n
+        Marketing department: marketing@mystiqueshop.com</string>
     <string name="email_to_send">Department\'s e-mail</string>
     <string name="subject_to_write">Subject to write</string>
     <string name="write_your_massage">Write your massage</string>

@@ -10,6 +10,8 @@ import android.widget.Button;
 import com.example.mystiquecatalogue_android.R;
 import com.example.mystiquecatalogue_android.views.BaseDrawerActivity;
 
+import butterknife.ButterKnife;
+
 
 public class ContactsActivity extends BaseDrawerActivity {
 
@@ -23,7 +25,9 @@ public class ContactsActivity extends BaseDrawerActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contacts);
 
-        mToolbar = findViewById(R.id.drawer_toolbar);
+        ButterKnife.bind(this);
+
+        setSupportActionBar(getToolbar());
 
         mButton = findViewById(R.id.btn_writemail);
 
@@ -44,8 +48,4 @@ public class ContactsActivity extends BaseDrawerActivity {
         return IDENTIFIER;
     }
 
-    @Override
-    protected Toolbar getDrawerToolbar() {
-        return mToolbar;
-    }
 }

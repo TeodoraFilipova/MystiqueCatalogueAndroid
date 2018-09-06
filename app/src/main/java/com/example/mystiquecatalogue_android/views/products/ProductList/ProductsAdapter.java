@@ -96,6 +96,7 @@ public class ProductsAdapter
 
         @BindView(R.id.iv_product)
         ImageView mProductImageView;
+
         private OnProductClickListener mOnClickListener;
         private Product mProduct;
 
