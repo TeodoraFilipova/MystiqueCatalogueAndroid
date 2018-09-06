@@ -37,7 +37,7 @@ public class DrinksAdapter extends RecyclerView.Adapter<DrinksAdapter.DrinksView
             (@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.drinks_item, parent, false);
-        int height = parent.getMeasuredHeight() / 3;
+        int height = parent.getMeasuredHeight() / 2;
         ViewGroup.LayoutParams lp = view.getLayoutParams();
         lp.height = height;
         view.setLayoutParams(lp);
@@ -77,20 +77,20 @@ public class DrinksAdapter extends RecyclerView.Adapter<DrinksAdapter.DrinksView
         @BindView(R.id.tv_name)
         TextView mNameTextView;
 
-        @BindView(R.id.tv_category)
+ /*       @BindView(R.id.tv_category)
         TextView mCategoryTextView;
-
-        @BindView(R.id.tv_type)
+*/
+       /* @BindView(R.id.tv_type)
         TextView mTypeTextView;
-
+*/
         @BindView(R.id.tv_units)
         TextView mUnitsTextView;
 
         @BindView(R.id.tv_size)
         TextView mSizeTextView;
 
-        @BindView(R.id.tv_number)
-        TextView mNumberTextView;
+       /* @BindView(R.id.tv_number)
+        TextView mNumberTextView;*/
 
         @BindView(R.id.iv_drink)
         ImageView mDrinkImageView;
@@ -104,11 +104,11 @@ public class DrinksAdapter extends RecyclerView.Adapter<DrinksAdapter.DrinksView
 
         void bind(Product drink) {
             mNameTextView.setText(drink.getName());
-            mCategoryTextView.setText(drink.getCategory());
-            mTypeTextView.setText(drink.getType());
+//            mCategoryTextView.setText(drink.getCategory());
+//            mTypeTextView.setText(drink.getType());
             mUnitsTextView.setText(drink.getUnits());
             mSizeTextView.setText(String.valueOf(drink.getSize()));
-            mNumberTextView.setText(String.valueOf(drink.getNumber()));
+//            mNumberTextView.setText(String.valueOf(drink.getNumber()));
             Picasso.get()
                     .load(drink.getImageUrl())
                     .into(mDrinkImageView);

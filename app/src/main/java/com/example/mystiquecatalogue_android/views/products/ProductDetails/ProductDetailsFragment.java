@@ -28,8 +28,8 @@ public class ProductDetailsFragment extends Fragment implements ProductDetailsCo
     @BindView(R.id.tv_details_name)
     TextView mDetailsNameTextView;
 
-    @BindView(R.id.tv_details_category)
-    TextView mDetailsCategoryTextView;
+/*    @BindView(R.id.tv_details_category)
+    TextView mDetailsCategoryTextView;*/
 
     @BindView(R.id.tv_details_type)
     TextView mDetailsTypeTextView;
@@ -76,7 +76,7 @@ public class ProductDetailsFragment extends Fragment implements ProductDetailsCo
     @Override
     public void showProduct(Product product) {
         mDetailsNameTextView.setText(product.getName());
-        mDetailsCategoryTextView.setText(product.getCategory());
+//        mDetailsCategoryTextView.setText(product.getCategory());
         mDetailsTypeTextView.setText(product.getType());
         mDetailsUnitsTextView.setText(product.getUnits());
         mDetailsSizeTextView.setText(String.valueOf(product.getSize()));

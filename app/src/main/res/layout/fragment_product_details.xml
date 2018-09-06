@@ -15,6 +15,8 @@
             android:id="@+id/tv_details_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
             android:textAlignment="center"/>
 
         <ImageView
@@ -24,40 +26,41 @@
             android:layout_below="@id/tv_details_name"
             tools:ignore="ContentDescription" />
 
-        <TextView
+        <!--<TextView
             android:id="@+id/tv_details_category"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:layout_below="@id/iv_details_pic"/>
+            android:layout_below="@id/iv_details_pic"/>-->
 
         <TextView
             android:id="@+id/tv_details_type"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:layout_below="@id/tv_details_category"/>
+            android:layout_below="@id/iv_details_pic"/>
 
-        <TextView
-            android:id="@+id/tv_details_units"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:layout_below="@id/tv_details_type"/>
 
         <TextView
             android:id="@+id/tv_details_size"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:layout_below="@id/tv_details_units"/>
+            android:layout_below="@id/tv_details_type"/>
+
+        <TextView
+            android:id="@+id/tv_details_units"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_below="@id/tv_details_size"/>
 
         <TextView
             android:id="@+id/tv_details_number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:layout_below="@id/tv_details_size"/>
+            android:layout_below="@id/tv_details_units"/>
 
     </RelativeLayout>
 

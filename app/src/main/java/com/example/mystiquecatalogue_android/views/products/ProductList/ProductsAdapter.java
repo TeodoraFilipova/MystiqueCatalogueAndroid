@@ -40,7 +40,7 @@ public class ProductsAdapter
     public ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.product_item, parent, false);
-        int height = parent.getMeasuredHeight() / 3;
+        int height = parent.getMeasuredHeight() / 2;
         ViewGroup.LayoutParams lp = view.getLayoutParams();
         lp.height = height;
         view.setLayoutParams(lp);
@@ -79,11 +79,11 @@ public class ProductsAdapter
         @BindView(R.id.tv_name)
         TextView mNameTextView;
 
-        @BindView(R.id.tv_category)
+       /* @BindView(R.id.tv_category)
         TextView mCategoryTextView;
-
-        @BindView(R.id.tv_type)
-        TextView mTypeTextView;
+*/
+        /*@BindView(R.id.tv_type)
+        TextView mTypeTextView;*/
 
         @BindView(R.id.tv_units)
         TextView mUnitsTextView;
@@ -91,8 +91,8 @@ public class ProductsAdapter
         @BindView(R.id.tv_size)
         TextView mSizeTextView;
 
-        @BindView(R.id.tv_number)
-        TextView mNumberTextView;
+        /*@BindView(R.id.tv_number)
+        TextView mNumberTextView;*/
 
         @BindView(R.id.iv_product)
         ImageView mProductImageView;
@@ -107,12 +107,12 @@ public class ProductsAdapter
 
         void bind(Product product) {
             mNameTextView.setText(product.getName());
-            mCategoryTextView.setText(product.getCategory());
-            mTypeTextView.setText(product.getType());
+//            mCategoryTextView.setText(product.getCategory());
+ //           mTypeTextView.setText(product.getType());
             mUnitsTextView.setText(product.getUnits());
 
             mSizeTextView.setText(String.valueOf(product.getSize()));
-            mNumberTextView.setText(String.valueOf(product.getNumber()));
+//            mNumberTextView.setText(String.valueOf(product.getNumber()));
 
             Picasso.get()
                     .load(product.getImageUrl())

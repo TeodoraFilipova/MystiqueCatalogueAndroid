@@ -30,6 +30,7 @@
     <string name="domestic_goods">Domestic goods</string>
     <string name="food_description">food_description</string>
     <string name="domestic_description">domestic_description</string>
-    <string name="welcome_title">welcome_title</string>
+    <string name="welcome_title">Welcome!</string>
+    <string name="product_description">product_description</string>
 
 </resources>
