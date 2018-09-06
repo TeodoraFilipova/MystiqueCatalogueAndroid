@@ -8,7 +8,9 @@ import android.view.View;
 
 import com.example.mystiquecatalogue_android.R;
 import com.example.mystiquecatalogue_android.views.contacts.ContactsActivity;
+import com.example.mystiquecatalogue_android.views.products.DomesticList.DomesticListActivity;
 import com.example.mystiquecatalogue_android.views.products.DrinksList.DrinksListActivity;
+import com.example.mystiquecatalogue_android.views.products.FoodList.FoodListActivity;
 import com.example.mystiquecatalogue_android.views.products.ProductList.ProductsListActivity;
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
@@ -40,6 +42,12 @@ public abstract class BaseDrawerActivity extends DaggerAppCompatActivity {
         PrimaryDrawerItem drinksItem = new PrimaryDrawerItem()
                 .withIdentifier(DrinksListActivity.IDENTIFIER)
                 .withName("Drinks");
+        PrimaryDrawerItem foodItem = new PrimaryDrawerItem()
+                .withIdentifier(FoodListActivity.IDENTIFIER)
+                .withName("Food");
+        PrimaryDrawerItem domesticItem = new PrimaryDrawerItem()
+                .withIdentifier(DomesticListActivity.IDENTIFIER)
+                .withName("Domestic goods");
         PrimaryDrawerItem contactItem = new PrimaryDrawerItem()
                 .withIdentifier(ContactsActivity.IDENTIFIER)
                 .withName("Contacts");
@@ -54,6 +62,10 @@ public abstract class BaseDrawerActivity extends DaggerAppCompatActivity {
                 listProductItem,
                 new DividerDrawerItem(),
                 drinksItem,
+                new DividerDrawerItem(),
+                foodItem,
+                new DividerDrawerItem(),
+                domesticItem,
                 new DividerDrawerItem(),
                 contactItem
         );
@@ -92,7 +104,15 @@ public abstract class BaseDrawerActivity extends DaggerAppCompatActivity {
             return  new Intent(
                     BaseDrawerActivity.this, DrinksListActivity.class
             );
-        } else if (identifier == ContactsActivity.IDENTIFIER) {
+        }else if (identifier == FoodListActivity.IDENTIFIER) {
+            return  new Intent(
+                    BaseDrawerActivity.this, FoodListActivity.class
+            );
+        }else if (identifier == DomesticListActivity.IDENTIFIER) {
+            return  new Intent(
+                    BaseDrawerActivity.this, DomesticListActivity.class
+            );
+        }else if (identifier == ContactsActivity.IDENTIFIER) {
             return  new Intent(
                     BaseDrawerActivity.this, ContactsActivity.class
             );

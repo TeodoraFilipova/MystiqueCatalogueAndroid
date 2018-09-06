@@ -22,6 +22,7 @@ import javax.inject.Singleton;
             ProductsListModule.class,
             ProductDetailsModule.class,
             DrinksListModule.class,
+            FoodListModule.class,
             DomesticListModule.class,
             RepositoriesModule.class,
             ServicesModule.class,

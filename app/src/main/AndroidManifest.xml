@@ -21,28 +21,10 @@
         <activity android:name=".views.contacts.ContactsActivity" />
         <activity android:name=".views.contacts.EmailActivity" />
         <activity android:name=".views.products.ProductList.ProductsListActivity" />
-        <activity
-            android:name=".views.products.Drinks.DrinksListActivity"
-            tools:ignore="InnerclassSeparator" />
-        <activity
-            android:name=".views.products.Drinks.DrinksDetailsActivity"
-            tools:ignore="InnerclassSeparator" />
-        <activity
-            android:name=".views.products.Food.FoodListActivity"
-            tools:ignore="InnerclassSeparator" />
-        <activity
-            android:name=".views.products.Domestics.DomesticListActivity"
-            tools:ignore="InnerclassSeparator" />
-        <activity
-            android:name=".views.products.Food.FoodDetailsActivity"
-            tools:ignore="InnerclassSeparator" />
-        <activity
-            android:name=".views.products.ProductDetails.ProductDetailsActivity"
-            tools:ignore="InnerclassSeparator" />
-        <activity
-            android:name=".views.products.Domestics.DomesticDetailsActivity"
+        <activity android:name=".views.products.ProductDetails.ProductDetailsActivity"
             tools:ignore="InnerclassSeparator" />
         <activity android:name=".views.products.DrinksList.DrinksListActivity" />
+        <activity android:name=".views.products.FoodList.FoodListActivity" />
         <activity android:name=".views.products.DomesticList.DomesticListActivity"></activity>
     </application>
 

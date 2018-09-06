@@ -1,5 +1,6 @@
 package com.example.mystiquecatalogue_android.views.products.ProductList;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -76,6 +77,7 @@ public class ProductsAdapter
     }
 
     public static class ProductViewHolder extends RecyclerView.ViewHolder {
+
         @BindView(R.id.tv_name)
         TextView mNameTextView;
 
@@ -105,13 +107,15 @@ public class ProductsAdapter
             ButterKnife.bind(this, view);
         }
 
+
         void bind(Product product) {
             mNameTextView.setText(product.getName());
 //            mCategoryTextView.setText(product.getCategory());
  //           mTypeTextView.setText(product.getType());
-            mUnitsTextView.setText(product.getUnits());
 
             mSizeTextView.setText(String.valueOf(product.getSize()));
+
+            mUnitsTextView.setText(product.getUnits());
 //            mNumberTextView.setText(String.valueOf(product.getNumber()));
 
             Picasso.get()
