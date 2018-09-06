@@ -32,8 +32,8 @@ public class ProductsAdapter
         mProducts = new ArrayList<>();
     }
 
-    public ProductsAdapter(Context context) {
-    }
+//    public ProductsAdapter(Context context) {
+//    }
 
     @NonNull
     @Override
@@ -110,8 +110,10 @@ public class ProductsAdapter
             mCategoryTextView.setText(product.getCategory());
             mTypeTextView.setText(product.getType());
             mUnitsTextView.setText(product.getUnits());
-            mSizeTextView.setText(product.getSize());
-            mNumberTextView.setText(product.getNumber());
+
+            mSizeTextView.setText(String.valueOf(product.getSize()));
+            mNumberTextView.setText(String.valueOf(product.getNumber()));
+
             Picasso.get()
                     .load(product.getImageUrl())
                     .into(mProductImageView);

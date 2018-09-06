@@ -26,6 +26,14 @@ public class HttpProductsService implements ProductsService {
     }
 
     @Override
+    public List<Product> getAllProductsInACategory(String category) throws Exception {
+        return mProductsRepository.getAll()
+                .stream()
+                .filter(product -> product.getCategory().equals(category))
+                .collect(Collectors.toList());
+    }
+
+    @Override
     public Product getDetailsById(int id) throws Exception {
         return mProductsRepository.getById(id);
     }
@@ -34,7 +42,18 @@ public class HttpProductsService implements ProductsService {
     public List<Product> getFilteredProducts(String pattern) throws Exception {
         String patternToLower = pattern.toLowerCase();
 
-        return getAllProducts().stream()
+        return getAllProducts()
+                .stream()
+                .filter(product -> product.getName().toLowerCase().contains(patternToLower))
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<Product> getFilteredProductsByCategory(String pattern, String category) throws Exception {
+        String patternToLower = pattern.toLowerCase();
+
+        return getAllProductsInACategory(category)
+                .stream()
                 .filter(product -> product.getName().toLowerCase().contains(patternToLower))
                 .collect(Collectors.toList());
     }

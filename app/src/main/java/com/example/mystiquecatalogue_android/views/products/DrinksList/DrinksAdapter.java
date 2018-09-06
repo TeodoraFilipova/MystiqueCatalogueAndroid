@@ -107,8 +107,8 @@ public class DrinksAdapter extends RecyclerView.Adapter<DrinksAdapter.DrinksView
             mCategoryTextView.setText(drink.getCategory());
             mTypeTextView.setText(drink.getType());
             mUnitsTextView.setText(drink.getUnits());
-            mSizeTextView.setText(drink.getSize());
-            mNumberTextView.setText(drink.getNumber());
+            mSizeTextView.setText(String.valueOf(drink.getSize()));
+            mNumberTextView.setText(String.valueOf(drink.getNumber()));
             Picasso.get()
                     .load(drink.getImageUrl())
                     .into(mDrinkImageView);

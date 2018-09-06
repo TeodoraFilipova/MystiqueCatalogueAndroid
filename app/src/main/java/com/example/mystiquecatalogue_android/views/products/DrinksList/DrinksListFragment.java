@@ -92,6 +92,8 @@ public class DrinksListFragment extends Fragment implements DrinksListContracts.
 
     @Override
     public void showEmptyProductsList() {
+        mDrinksAdapter.clear();
+        mDrinksAdapter.notifyDataSetChanged();
         Toast.makeText(getContext(),"No drinks available to show!", Toast.LENGTH_LONG)
                 .show();
     }

@@ -37,11 +37,7 @@ public class DrinksListPresenter implements DrinksListContracts.Presenter {
         mView.showLoading();
         Disposable observable = Observable
                 .create((ObservableOnSubscribe<List<Product>>) emitter -> {
-                    List<Product> drinks = mProductsService.getAllProducts()
-                            .stream()
-                            .filter(drink -> drink.getCategory().equals(PRODUCT_CATEGORY))
-                            .collect(Collectors.toList());
-
+                    List<Product> drinks = mProductsService.getAllProductsInACategory(PRODUCT_CATEGORY);
                     emitter.onNext(drinks);
                     emitter.onComplete();
                 })
@@ -56,7 +52,7 @@ public class DrinksListPresenter implements DrinksListContracts.Presenter {
         mView.showLoading();
         Disposable observable = Observable
                 .create((ObservableOnSubscribe<List<Product>>) emitter -> {
-                    List<Product> drinks = mProductsService.getFilteredProducts(pattern);
+                    List<Product> drinks = mProductsService.getFilteredProductsByCategory(pattern, PRODUCT_CATEGORY);
                     emitter.onNext(drinks);
                     emitter.onComplete();
                 })

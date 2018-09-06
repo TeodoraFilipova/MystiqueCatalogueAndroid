@@ -18,12 +18,12 @@ public class RepositoriesModule {
 
     @Provides
     @Singleton
-    public Repository<Product> productRepositoryRepository(
+    public Repository<Product> productRepository(
             @Named("baseServerUrl") String baseServerUrl,
             HttpRequester httpRequester,
             JsonParser<Product> jsonParser
     ) {
-        String url = baseServerUrl + "/superheros";
+        String url = baseServerUrl + "/products";
         return new HttpRepository<>(url, httpRequester, jsonParser);
     }
 

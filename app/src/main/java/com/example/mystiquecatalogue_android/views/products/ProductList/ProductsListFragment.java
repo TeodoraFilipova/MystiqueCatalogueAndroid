@@ -94,6 +94,8 @@ public class ProductsListFragment extends Fragment implements ProductsListContra
 
     @Override
     public void showEmptyProductsList() {
+        mProductsAdapter.clear();
+        mProductsAdapter.notifyDataSetChanged();
         Toast.makeText(getContext(),"No products available to show!", Toast.LENGTH_LONG)
                 .show();
     }
