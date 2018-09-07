@@ -59,6 +59,19 @@ public class HttpProductsService implements ProductsService {
     }
 
     @Override
+    public List<Product> getAllProductsInWishList() throws Exception {
+        return getAllProducts()
+                .stream()
+                .filter(product -> product.getBought() != 0)
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public Product updateProduct(int id, Product product) throws Exception {
+        return mProductsRepository.updateById(id, product);
+    }
+
+    @Override
     public Product createProduct(Product superhero) throws Exception {
         if (!mProductValidator.isValid(superhero)) {
             throw new IllegalArgumentException("Product is invalid");

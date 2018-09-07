@@ -6,8 +6,10 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.mystiquecatalogue_android.R;
 import com.example.mystiquecatalogue_android.models.Product;
@@ -49,6 +51,8 @@ public class ProductDetailsFragment extends Fragment implements ProductDetailsCo
     @BindView(R.id.iv_detailspic)
     ImageView mDetailsProductImageView;
 
+    @BindView(R.id.button_add_to_wish_list)
+    Button mAddToWishListButton;
 
     @Inject
     public ProductDetailsFragment() {
@@ -74,8 +78,6 @@ public class ProductDetailsFragment extends Fragment implements ProductDetailsCo
         mPresenter.loadProduct();
     }
 
-
-
     @Override
     public void showProduct(Product product) {
         mDetailsNameTextView.setText(product.getName());
@@ -89,6 +91,18 @@ public class ProductDetailsFragment extends Fragment implements ProductDetailsCo
                 .load(product.getImageUrl())
                 .into(mDetailsProductImageView);
 
+        mAddToWishListButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                String message = "Product added to Wish List!";
+                Toast.makeText(getContext(), message, Toast.LENGTH_LONG)
+                        .show();
+                try {
+                    mPresenter.updateProduct();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
     }
 
     @Override

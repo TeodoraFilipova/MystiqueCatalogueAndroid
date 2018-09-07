@@ -48,6 +48,13 @@ public class ProductDetailsPresenter implements ProductDetailsContracts.Presente
     }
 
     @Override
+    public void updateProduct() throws Exception {
+        Product newProduct = mProductsService.getDetailsById(mProductId);
+        newProduct.setBought(1);
+        mProductsService.updateProduct(mProductId, newProduct);
+    }
+
+    @Override
     public void setProductId(int productId) {
         mProductId = productId;
     }

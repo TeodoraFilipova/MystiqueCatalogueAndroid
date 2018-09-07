@@ -10,4 +10,6 @@ public interface Repository<T> {
     T add(T item) throws IOException;
 
     T getById(int id) throws IOException;
+
+    T updateById(int id, T item) throws IOException;
 }

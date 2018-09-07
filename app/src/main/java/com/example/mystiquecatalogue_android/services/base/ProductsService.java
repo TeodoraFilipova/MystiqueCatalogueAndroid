@@ -17,5 +17,9 @@ public interface ProductsService {
 
     List<Product> getFilteredProductsByCategory(String pattern, String category) throws Exception;
 
+    List<Product> getAllProductsInWishList() throws Exception;
+
+    Product updateProduct(int id, Product product) throws Exception;
+
     Product createProduct(Product product) throws Exception;
 }

@@ -47,4 +47,13 @@ public class HttpRepository<T> implements Repository<T> {
         json = mHttpRequester.get(url);
         return mJsonParser.fromJson(json);
     }
+
+    @Override
+    public T updateById(int id, T item) throws IOException {
+        String url = mServerUrl + "/update/" + id;
+        String requestBody = mJsonParser.toJson(item);
+        String responseBody = mHttpRequester.put(url, requestBody);
+
+        return mJsonParser.fromJson(responseBody);
+    }
 }

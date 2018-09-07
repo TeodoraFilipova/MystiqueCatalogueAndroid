@@ -13,7 +13,6 @@ import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.disposables.Disposable;
 
 public class WishListPresenter implements WishListContracts.Presenter {
-        private static final int BOUGHT_STATUS = 1;
         private final ProductsService mProductsService;
         private final SchedulerProvider mSchedulerProvider;
         private WishListContracts.View mView;
@@ -35,7 +34,7 @@ public class WishListPresenter implements WishListContracts.Presenter {
             mView.showLoading();
             Disposable observable = Observable
                     .create((ObservableOnSubscribe<List<Product>>) emitter -> {
-                        List<Product> wished_products = mProductsService.getAllProductsWishList(BOUGHT_STATUS);
+                        List<Product> wished_products = mProductsService.getAllProductsInWishList();
                         emitter.onNext(wished_products);
                         emitter.onComplete();
                     })

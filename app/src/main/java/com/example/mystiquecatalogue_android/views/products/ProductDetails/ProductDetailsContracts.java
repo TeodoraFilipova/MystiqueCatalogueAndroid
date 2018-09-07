@@ -20,6 +20,8 @@ public interface ProductDetailsContracts {
 
         void loadProduct();
 
+        void updateProduct() throws Exception;
+
         void setProductId(int id);
     }
 }

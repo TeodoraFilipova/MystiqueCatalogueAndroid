@@ -27,7 +27,7 @@
         <activity android:name=".views.products.DrinksList.DrinksListActivity" />
         <activity android:name=".views.products.FoodList.FoodListActivity" />
         <activity android:name=".views.products.DomesticList.DomesticListActivity" />
-        <activity android:name=".views.products.WishList.BagActivity"></activity>
+        <activity android:name=".views.products.WishList.WishListActivity"></activity>
     </application>
 
 </manifest>
