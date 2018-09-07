@@ -28,6 +28,7 @@ import javax.inject.Singleton;
             ServicesModule.class,
             ValidatorsModule.class,
             ViewsModule.class,
+            WishListModule.class,
             AndroidSupportInjectionModule.class})
     public interface AppComponent extends AndroidInjector<AndroidApplication> {
 

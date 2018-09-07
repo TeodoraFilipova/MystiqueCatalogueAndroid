@@ -3,7 +3,6 @@ package com.example.mystiquecatalogue_android.views.products.DrinksList;
 import com.example.mystiquecatalogue_android.async.base.SchedulerProvider;
 import com.example.mystiquecatalogue_android.models.Product;
 import com.example.mystiquecatalogue_android.services.base.ProductsService;
-import com.example.mystiquecatalogue_android.views.products.ProductList.ProductsListContracts;
 
 import java.util.List;
 import java.util.stream.Collectors;

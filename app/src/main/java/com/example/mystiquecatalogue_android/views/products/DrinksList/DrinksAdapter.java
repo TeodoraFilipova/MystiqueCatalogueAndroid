@@ -97,6 +97,7 @@ public class DrinksAdapter extends RecyclerView.Adapter<DrinksAdapter.DrinksView
 
         @BindView(R.id.iv_drinks)
         ImageView mDrinkImageView;
+
         private DrinksAdapter.OnDrinkClickListener mOnClickListener;
         private Product mDrink;
 

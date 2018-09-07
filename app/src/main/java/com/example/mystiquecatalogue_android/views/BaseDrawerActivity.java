@@ -12,6 +12,7 @@ import com.example.mystiquecatalogue_android.views.products.DomesticList.Domesti
 import com.example.mystiquecatalogue_android.views.products.DrinksList.DrinksListActivity;
 import com.example.mystiquecatalogue_android.views.products.FoodList.FoodListActivity;
 import com.example.mystiquecatalogue_android.views.products.ProductList.ProductsListActivity;
+import com.example.mystiquecatalogue_android.views.products.WishList.WishListActivity;
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.model.DividerDrawerItem;
@@ -48,6 +49,9 @@ public abstract class BaseDrawerActivity extends DaggerAppCompatActivity {
         PrimaryDrawerItem domesticItem = new PrimaryDrawerItem()
                 .withIdentifier(DomesticListActivity.IDENTIFIER)
                 .withName("Domestic goods");
+        PrimaryDrawerItem wishedItem = new PrimaryDrawerItem()
+                .withIdentifier(WishListActivity.IDENTIFIER)
+                .withName("Wished products");
         PrimaryDrawerItem contactItem = new PrimaryDrawerItem()
                 .withIdentifier(ContactsActivity.IDENTIFIER)
                 .withName("Contacts");
@@ -66,6 +70,8 @@ public abstract class BaseDrawerActivity extends DaggerAppCompatActivity {
                 foodItem,
                 new DividerDrawerItem(),
                 domesticItem,
+                new DividerDrawerItem(),
+                wishedItem,
                 new DividerDrawerItem(),
                 contactItem
         );
@@ -111,6 +117,10 @@ public abstract class BaseDrawerActivity extends DaggerAppCompatActivity {
         }else if (identifier == DomesticListActivity.IDENTIFIER) {
             return  new Intent(
                     BaseDrawerActivity.this, DomesticListActivity.class
+            );
+        }else if (identifier == WishListActivity.IDENTIFIER) {
+            return  new Intent(
+                    BaseDrawerActivity.this, WishListActivity.class
             );
         }else if (identifier == ContactsActivity.IDENTIFIER) {
             return  new Intent(

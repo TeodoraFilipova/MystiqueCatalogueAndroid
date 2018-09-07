@@ -8,6 +8,7 @@ import com.example.mystiquecatalogue_android.views.products.DrinksList.DrinksLis
 import com.example.mystiquecatalogue_android.views.products.FoodList.FoodListActivity;
 import com.example.mystiquecatalogue_android.views.products.ProductDetails.ProductDetailsActivity;
 import com.example.mystiquecatalogue_android.views.products.ProductList.ProductsListActivity;
+import com.example.mystiquecatalogue_android.views.products.WishList.WishListActivity;
 
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
@@ -50,6 +51,12 @@ public abstract class ActivityBindingModule {
             DomesticListModule.class
     })
     abstract DomesticListActivity domesticListActivity();
+
+    @ActivityScoped
+    @ContributesAndroidInjector(modules = {
+            WishListModule.class
+    })
+    abstract WishListActivity wishListActivity();
 
     @ActivityScoped
     @ContributesAndroidInjector()
