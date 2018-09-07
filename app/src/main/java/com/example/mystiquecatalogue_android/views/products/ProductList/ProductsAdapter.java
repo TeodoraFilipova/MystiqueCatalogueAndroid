@@ -83,18 +83,21 @@ public class ProductsAdapter
 
        /* @BindView(R.id.tv_category)
         TextView mCategoryTextView;
-*/
-        /*@BindView(R.id.tv_type)
-        TextView mTypeTextView;*/
 
-        @BindView(R.id.tv_units)
-        TextView mUnitsTextView;
+        @BindView(R.id.tv_type)
+        TextView mTypeTextView;*/
 
         @BindView(R.id.tv_size)
         TextView mSizeTextView;
 
+        @BindView(R.id.tv_units)
+        TextView mUnitsTextView;
+
         /*@BindView(R.id.tv_number)
         TextView mNumberTextView;*/
+
+        @BindView(R.id.tv_price)
+        TextView mPriceTextView;
 
         @BindView(R.id.iv_product)
         ImageView mProductImageView;
@@ -111,12 +114,13 @@ public class ProductsAdapter
         void bind(Product product) {
             mNameTextView.setText(product.getName());
 //            mCategoryTextView.setText(product.getCategory());
- //           mTypeTextView.setText(product.getType());
+//            mTypeTextView.setText(product.getType());
 
             mSizeTextView.setText(String.valueOf(product.getSize()));
 
             mUnitsTextView.setText(product.getUnits());
 //            mNumberTextView.setText(String.valueOf(product.getNumber()));
+            mPriceTextView.setText(String.valueOf(product.getPrice()));
 
             Picasso.get()
                     .load(product.getImageUrl())

@@ -11,12 +11,14 @@ public class Product implements Serializable {
     public String units;
     public int size;
     public int number;
+    private double price;
+    private int bought;
 
     public Product() {
         //empty constructor
     }
 
-    public Product(String imageUrl, String name, String category, int id, String type, String units, int size, int number) {
+    public Product(String imageUrl, String name, String category, int id, String type, String units, int size, int number, double price, int bought) {
         this.imageUrl = imageUrl;
         this.name = name;
         this.category = category;
@@ -25,6 +27,8 @@ public class Product implements Serializable {
         this.units = units;
         this.size = size;
         this.number = number;
+        this.price = price;
+        this.bought = bought;
     }
 
     public String getName() {
@@ -89,5 +93,21 @@ public class Product implements Serializable {
 
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public int getBought() {
+        return bought;
+    }
+
+    public void setBought(int bought) {
+        this.bought = bought;
     }
 }

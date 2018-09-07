@@ -1,50 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        >
 
         <ImageView
             android:id="@+id/iv_domestic"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:contentDescription="@string/domestic"/>
+            android:layout_alignParentStart="true"
+            android:contentDescription="@string/product_description" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:background="@color/md_grey_50"
-            android:orientation="vertical"
-            android:layout_below="@id/iv_domestic">
+            android:layout_below="@id/iv_domestic"
 
-            <TextView
-                android:id="@+id/tv_name"
+            android:text="Product: " />
+
+        <TextView
+            android:id="@+id/tv_domesticname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/iv_domestic"
+            android:layout_marginStart="60dp"
+            android:text="product"
+            android:textAlignment="center"
+            android:textColor="@color/md_blue_900" />
+
+        <!-- <TextView
+                android:id="@+id/tv_domesticcategory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
-                android:textColor="@color/md_blue_900" />
+                android:textColor="@color/md_blue_900"  />-->
 
-            <TextView
-                android:id="@+id/tv_units"
+        <!--<TextView
+                android:id="@+id/tv_domestictype"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="type: "
                 android:textAlignment="center"
-                android:textColor="@color/md_blue_900" />
+                android:textColor="@color/md_blue_900"  />
+-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_domesticname"
+            android:text="Size: " />
 
-            <TextView
-                android:id="@+id/tv_size"
+        <TextView
+            android:id="@+id/tv_domesticsize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_domesticname"
+            android:layout_marginStart="60dp"
+            android:text="size "
+            android:textColor="@color/md_blue_900" />
+
+        <TextView
+            android:id="@+id/tv_domesticunits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_domesticname"
+            android:layout_marginStart="90dp"
+            android:text="units"
+            android:textColor="@color/md_blue_900" />
+
+        <!--<TextView
+                android:id="@+id/tv_number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="number: "
                 android:textAlignment="center"
-                android:textColor="@color/md_blue_900" />
+                android:textColor="@color/md_blue_900"  />-->
 
-        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_domesticsize"
+            android:text="Price: " />
+
+        <TextView
+            android:id="@+id/tv_domesticprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_below="@+id/tv_domesticsize"
+            android:text="price"
+            android:textColor="@color/md_blue_900" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:text="$"
+            android:layout_below="@id/tv_domesticsize" />
+
+
     </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

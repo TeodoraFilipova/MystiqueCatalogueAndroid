@@ -12,58 +12,108 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/tv_details_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:layout_marginStart="144dp"
+            android:layout_marginStart="60dp"
+            android:text="Product: "
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_details_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="140dp"
+            android:text="name"
             android:textSize="16sp"
             android:textStyle="bold" />
 
         <ImageView
-            android:id="@+id/iv_details_pic"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tv_details_name"
+            android:id="@+id/iv_detailspic"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_below="@+id/tv_details_name"
+            android:layout_centerHorizontal="true"
             tools:ignore="ContentDescription" />
 
-        <TextView
+       <!-- <TextView
             android:id="@+id/tv_details_category"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="category"
             android:textAlignment="center"
-            android:layout_below="@id/iv_details_pic"/>
+            android:layout_below="@id/iv_details_pic"/>-->
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="80dp"
+            android:text="Type: "
+            android:layout_below="@id/iv_detailspic" />
 
         <TextView
             android:id="@+id/tv_details_type"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:layout_below="@id/iv_details_pic"/>
+            android:layout_below="@+id/iv_detailspic"
+            android:layout_marginStart="130dp"
+            android:text="type" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="80dp"
+            android:text="Size: "
+            android:layout_below="@id/tv_details_type" />
 
         <TextView
             android:id="@+id/tv_details_size"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAlignment="center"
+            android:text="size"
+            android:layout_marginStart="130dp"
             android:layout_below="@id/tv_details_type"/>
 
         <TextView
             android:id="@+id/tv_details_units"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="81dp"
-            android:textAlignment="center" />
+            android:text="units"
+            android:layout_marginStart="160dp"
+            android:layout_below="@id/tv_details_type" />
 
-        <TextView
+        <!--<TextView
             android:id="@+id/tv_details_number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:layout_below="@id/tv_details_units"/>
+            android:layout_below="@id/tv_details_units"/>-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="80dp"
+            android:text="Price: "
+            android:layout_below="@id/tv_details_size" />
+
+        <TextView
+            android:id="@+id/tv_details_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="price"
+            android:layout_marginStart="130dp"
+            android:layout_below="@id/tv_details_size"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="170dp"
+            android:text="$"
+            android:layout_below="@id/tv_details_size" />
 
     </RelativeLayout>
 

@@ -74,7 +74,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
     }
 
     public static class FoodViewHolder extends RecyclerView.ViewHolder {
-        @BindView(R.id.tv_name)
+        @BindView(R.id.tv_foodname)
         TextView mNameTextView;
 
         /*       @BindView(R.id.tv_category)
@@ -83,14 +83,18 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
        /* @BindView(R.id.tv_type)
         TextView mTypeTextView;
 */
-        @BindView(R.id.tv_units)
-        TextView mUnitsTextView;
 
-        @BindView(R.id.tv_size)
+        @BindView(R.id.tv_foodsize)
         TextView mSizeTextView;
+
+        @BindView(R.id.tv_foodunits)
+        TextView mUnitsTextView;
 
        /* @BindView(R.id.tv_number)
         TextView mNumberTextView;*/
+
+        @BindView(R.id.tv_foodprice)
+        TextView mPriceTextView;
 
         @BindView(R.id.iv_food)
         ImageView mFoodImageView;
@@ -110,6 +114,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
             mUnitsTextView.setText(food.getUnits());
             mSizeTextView.setText(String.valueOf(food.getSize()));
 //            mNumberTextView.setText(String.valueOf(food.getNumber()));
+            mPriceTextView.setText(String.valueOf(food.getPrice()));
             Picasso.get()
                     .load(food.getImageUrl())
                     .into(mFoodImageView);

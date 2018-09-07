@@ -73,17 +73,30 @@ public class DomesticAdapter extends RecyclerView.Adapter<DomesticAdapter.Domest
     }
 
     public static class DomesticViewHolder extends RecyclerView.ViewHolder {
-        @BindView(R.id.tv_name)
+        @BindView(R.id.tv_domesticname)
         TextView mNameTextView;
 
-        @BindView(R.id.tv_units)
+       /* @BindView(R.id.tv_domesticcategory)
+        TextView mCategoryTextView;
+
+        @BindView(R.id.tv_domestictype)
+        TextView mTypeTextView;*/
+
+        @BindView(R.id.tv_domesticsize)
+        TextView mSizeTextView;
+
+        @BindView(R.id.tv_domesticunits)
         TextView mUnitsTextView;
 
-        @BindView(R.id.tv_size)
-        TextView mSizeTextView;
+        /*@BindView(R.id.tv_number)
+        TextView mNumberTextView;*/
+
+        @BindView(R.id.tv_domesticprice)
+        TextView mPriceTextView;
 
         @BindView(R.id.iv_domestic)
         ImageView mDomesticImageView;
+
         private DomesticAdapter.OnDomesticClickListener mOnClickListener;
         private Product mDomestic;
 
@@ -94,8 +107,15 @@ public class DomesticAdapter extends RecyclerView.Adapter<DomesticAdapter.Domest
 
         void bind(Product domestic) {
             mNameTextView.setText(domestic.getName());
-            mUnitsTextView.setText(domestic.getUnits());
+//            mCategoryTextView.setText(domestic.getCategory());
+//            mTypeTextView.setText(domestic.getType());
+
             mSizeTextView.setText(String.valueOf(domestic.getSize()));
+
+            mUnitsTextView.setText(domestic.getUnits());
+//            mNumberTextView.setText(String.valueOf(domestic.getNumber()));
+            mPriceTextView.setText(String.valueOf(domestic.getPrice()));
+
             Picasso.get()
                     .load(domestic.getImageUrl())
                     .into(mDomesticImageView);

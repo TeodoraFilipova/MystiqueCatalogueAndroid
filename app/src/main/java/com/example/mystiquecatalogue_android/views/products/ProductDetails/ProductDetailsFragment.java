@@ -40,10 +40,13 @@ public class ProductDetailsFragment extends Fragment implements ProductDetailsCo
     @BindView(R.id.tv_details_size)
     TextView mDetailsSizeTextView;
 
-    @BindView(R.id.tv_details_number)
-    TextView mDetailsNumberTextView;
+    @BindView(R.id.tv_details_price)
+    TextView mDetailsPriceTextView;
 
-    @BindView(R.id.iv_details_pic)
+  /*  @BindView(R.id.tv_details_number)
+    TextView mDetailsNumberTextView;
+*/
+    @BindView(R.id.iv_detailspic)
     ImageView mDetailsProductImageView;
 
 
@@ -80,7 +83,8 @@ public class ProductDetailsFragment extends Fragment implements ProductDetailsCo
         mDetailsTypeTextView.setText(product.getType());
         mDetailsUnitsTextView.setText(product.getUnits());
         mDetailsSizeTextView.setText(String.valueOf(product.getSize()));
-        mDetailsNumberTextView.setText(String.valueOf(product.getNumber()));
+        mDetailsPriceTextView.setText(String.valueOf(product.getPrice()));
+//        mDetailsNumberTextView.setText(String.valueOf(product.getNumber()));
         Picasso.get()
                 .load(product.getImageUrl())
                 .into(mDetailsProductImageView);
