@@ -48,10 +48,10 @@ public abstract class BaseDrawerActivity extends DaggerAppCompatActivity {
                 .withName("Food");
         PrimaryDrawerItem domesticItem = new PrimaryDrawerItem()
                 .withIdentifier(DomesticListActivity.IDENTIFIER)
-                .withName("Domestic goods");
+                .withName("Domestic Goods");
         PrimaryDrawerItem wishedItem = new PrimaryDrawerItem()
                 .withIdentifier(WishListActivity.IDENTIFIER)
-                .withName("Wished products");
+                .withName("Wish List Products");
         PrimaryDrawerItem contactItem = new PrimaryDrawerItem()
                 .withIdentifier(ContactsActivity.IDENTIFIER)
                 .withName("Contacts");
