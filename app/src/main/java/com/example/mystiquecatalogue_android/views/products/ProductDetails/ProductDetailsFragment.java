@@ -93,9 +93,6 @@ public class ProductDetailsFragment extends Fragment implements ProductDetailsCo
 
         mAddToWishListButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                String message = "Product added to Wish List!";
-                Toast.makeText(getContext(), message, Toast.LENGTH_LONG)
-                        .show();
                 try {
                     mPresenter.updateProduct();
                 } catch (Exception e) {
@@ -124,5 +121,12 @@ public class ProductDetailsFragment extends Fragment implements ProductDetailsCo
     @Override
     public void hideLoading() {
 
+    }
+
+    @Override
+    public void showAddedToWishList(Product product) {
+        String message = "Product " + product.getName() + " added to Wish List!";
+        Toast.makeText(getContext(), message, Toast.LENGTH_LONG)
+                .show();
     }
 }

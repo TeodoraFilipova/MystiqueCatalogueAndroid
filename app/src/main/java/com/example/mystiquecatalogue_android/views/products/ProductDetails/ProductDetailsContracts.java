@@ -13,6 +13,8 @@ public interface ProductDetailsContracts {
         void showLoading();
 
         void hideLoading();
+
+        void showAddedToWishList(Product product);
     }
 
     interface Presenter {

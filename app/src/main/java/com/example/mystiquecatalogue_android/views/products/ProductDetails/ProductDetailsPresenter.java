@@ -49,9 +49,21 @@ public class ProductDetailsPresenter implements ProductDetailsContracts.Presente
 
     @Override
     public void updateProduct() throws Exception {
-        Product newProduct = mProductsService.getDetailsById(mProductId);
-        newProduct.setBought(1);
-        mProductsService.updateProduct(mProductId, newProduct);
+
+        Disposable observable = Observable
+                .create((ObservableOnSubscribe<Product>) emitter -> {
+                    Product newProduct = mProductsService.getDetailsById(mProductId);
+                    int newBought = newProduct.getBought() + 1;
+                    newProduct.setBought(newBought);
+                    mProductsService.updateProduct(mProductId, newProduct);
+
+                    emitter.onNext(newProduct);
+                    emitter.onComplete();
+                })
+                .subscribeOn(mSchedulerProvider.background())
+                .observeOn(mSchedulerProvider.ui())
+                .doOnError(mView::showError)
+                .subscribe(mView::showAddedToWishList);
     }
 
     @Override
