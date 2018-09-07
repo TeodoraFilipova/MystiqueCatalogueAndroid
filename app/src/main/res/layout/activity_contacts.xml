@@ -23,7 +23,6 @@
             android:id="@+id/tv_contactinfo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="13dp"
             android:text="@string/contactinfo"
@@ -35,10 +34,10 @@
             android:id="@+id/tv_address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
             android:layout_alignStart="@+id/img_map"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             android:text="@string/warehouse_address"
+            android:layout_below="@+id/tv_contactinfo"
             android:textSize="14sp" />
 
         <TextView

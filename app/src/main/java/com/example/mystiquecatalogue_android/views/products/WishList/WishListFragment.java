@@ -96,7 +96,7 @@ public class WishListFragment extends Fragment implements WishListContracts.View
     public void showEmptyProductsList() {
         mWishAdapter.clear();
         mWishAdapter.notifyDataSetChanged();
-        Toast.makeText(getContext(),"No wished products to show!", Toast.LENGTH_LONG)
+        Toast.makeText(getContext(),"No products added to the Wish List yet!", Toast.LENGTH_LONG)
                 .show();
     }
 

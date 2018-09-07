@@ -18,7 +18,6 @@ public class ContactsActivity extends BaseDrawerActivity {
     public static final long IDENTIFIER = 4;
 
     private Button mButton;
-    private Toolbar mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
