@@ -36,25 +36,32 @@ public abstract class BaseDrawerActivity extends DaggerAppCompatActivity {
         //if you want to update the items at a later timeit is recommended to keep it in a variable
         PrimaryDrawerItem mainItem = new PrimaryDrawerItem()
                 .withIdentifier(MainActivity.IDENTIFIER)
-                .withName("Main Page");
+                .withName("Main Page")
+                .withIcon(R.drawable.icon_main_page);
         PrimaryDrawerItem listProductItem = new PrimaryDrawerItem()
                 .withIdentifier(ProductsListActivity.IDENTIFIER)
-                .withName("All Products");
+                .withName("All Products")
+                .withIcon(R.drawable.icon_all_products);
         PrimaryDrawerItem drinksItem = new PrimaryDrawerItem()
                 .withIdentifier(DrinksListActivity.IDENTIFIER)
-                .withName("Drinks");
+                .withName("Drinks")
+                .withIcon(R.drawable.icon_drink);
         PrimaryDrawerItem foodItem = new PrimaryDrawerItem()
                 .withIdentifier(FoodListActivity.IDENTIFIER)
-                .withName("Food");
+                .withName("Food")
+                .withIcon(R.drawable.icon_food);
         PrimaryDrawerItem domesticItem = new PrimaryDrawerItem()
                 .withIdentifier(DomesticListActivity.IDENTIFIER)
-                .withName("Domestic Goods");
+                .withName("Domestic Goods")
+                .withIcon(R.drawable.icon_domestic);
         PrimaryDrawerItem wishedItem = new PrimaryDrawerItem()
                 .withIdentifier(WishListActivity.IDENTIFIER)
-                .withName("Wish List Products");
+                .withName("Wish List Products")
+                .withIcon(R.drawable.icon_wishlist);
         PrimaryDrawerItem contactItem = new PrimaryDrawerItem()
                 .withIdentifier(ContactsActivity.IDENTIFIER)
-                .withName("Contacts");
+                .withName("Contacts")
+                .withIcon(R.drawable.icon_contacts);
 
         //create the drawer and remember the `Drawer` result object
         DrawerBuilder drawerBuilder = new DrawerBuilder();
