@@ -1,13 +1,12 @@
 package com.example.mystiquecatalogue_android.views;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 
 import com.example.mystiquecatalogue_android.R;
-import com.example.mystiquecatalogue_android.views.contacts.ContactsActivity;
+import com.example.mystiquecatalogue_android.views.contacts.map.ContactsActivity;
 import com.example.mystiquecatalogue_android.views.products.DomesticList.DomesticListActivity;
 import com.example.mystiquecatalogue_android.views.products.DrinksList.DrinksListActivity;
 import com.example.mystiquecatalogue_android.views.products.FoodList.FoodListActivity;

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".views.contacts.ContactsActivity">
+    tools:context=".views.contacts.map.ContactsActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -19,52 +19,12 @@
         android:layout_width="match_parent"
         android:layout_height="40dp" />
 
-        <TextView
-            android:id="@+id/tv_contactinfo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="13dp"
-            android:text="@string/contactinfo"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:layout_below="@id/drawer_toolbar"/>
+        <FrameLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/drawer_toolbar"/>
 
-        <TextView
-            android:id="@+id/tv_address"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/img_map"
-            android:layout_marginTop="20dp"
-            android:text="@string/warehouse_address"
-            android:layout_below="@+id/tv_contactinfo"
-            android:textSize="14sp" />
-
-        <TextView
-            android:id="@+id/tv_phones"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/img_map"
-            android:layout_below="@+id/tv_address"
-            android:text="@string/phone_nums"
-            android:textSize="14sp"
-            />
-
-        <ImageView
-            android:id="@+id/img_map"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            android:layout_centerInParent="true"
-            android:src="@drawable/map" />
-
-        <Button
-            android:id="@+id/btn_writemail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="46dp"
-            android:text="@string/write_email" />
     </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

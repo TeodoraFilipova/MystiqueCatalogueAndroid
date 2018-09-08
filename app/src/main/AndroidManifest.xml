@@ -18,8 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".views.contacts.ContactsActivity" />
-        <activity android:name=".views.contacts.EmailActivity" />
+        <activity android:name=".views.contacts.map.ContactsActivity" />
+        <activity android:name=".views.contacts.email.EmailActivity" />
         <activity android:name=".views.products.ProductList.ProductsListActivity" />
         <activity
             android:name=".views.products.ProductDetails.ProductDetailsActivity"

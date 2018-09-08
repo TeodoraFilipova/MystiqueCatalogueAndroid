@@ -10,8 +10,8 @@
         Delivery department: delivery@mystiqueshop.com\n
         Marketing department: marketing@mystiqueshop.com</string>
     <string name="email_to_send">Department\'s e-mail</string>
-    <string name="subject_to_write">Subject to write</string>
-    <string name="write_your_massage">Write your massage</string>
+    <string name="subject_to_write">Subject</string>
+    <string name="write_your_message">Write your message</string>
     <string name="send">Send</string>
     <string name="promo_title">Week promotion</string>
     <string name="add_to_wish_list">Add to Wish List</string>
