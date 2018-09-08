@@ -24,6 +24,8 @@ import javax.inject.Singleton;
             DrinksListModule.class,
             FoodListModule.class,
             DomesticListModule.class,
+            ContactsModule.class,
+            EmailModule.class,
             RepositoriesModule.class,
             ServicesModule.class,
             ValidatorsModule.class,

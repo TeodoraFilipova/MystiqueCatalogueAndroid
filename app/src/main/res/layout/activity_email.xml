@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".views.contacts.EmailActivity">
+    tools:context=".views.contacts.email.EmailActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -14,64 +14,17 @@
         tools:layout_editor_absoluteY="0dp"
         tools:ignore="MissingConstraints">
 
-        <TextView
-            android:id="@+id/tv_writeemail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="@string/write_email"
-            android:textSize="16sp"
-            android:textStyle="bold"/>
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/drawer_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
 
-        <TextView
-            android:id="@+id/tv_mails"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tv_writeemail"
-            android:text="@string/emails"
-            android:textSize="14sp"
-            android:textStyle="italic"/>
+        <FrameLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/drawer_toolbar"/>
 
-        <EditText
-            android:id="@+id/sendTo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tv_mails"
-            android:layout_marginTop="5dp"
-            android:textSize="14sp"
-            android:ems="10"
-            android:hint="@string/email_to_send"
-            android:inputType="textEmailAddress" />
-
-        <EditText
-            android:id="@+id/subject"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/sendTo"
-            android:textSize="14sp"
-            android:layout_marginTop="5dp"
-            android:hint="@string/subject_to_write"
-            android:inputType="textPersonName" />
-
-
-        <EditText
-            android:id="@+id/massageText"
-            android:layout_width="300dp"
-            android:layout_height="200dp"
-            android:layout_below="@id/subject"
-            android:layout_marginTop="5dp"
-            android:hint="@string/write_your_massage"
-            android:textSize="14sp"
-            android:imeActionLabel=""
-            android:inputType="textMultiLine" />
-
-        <Button
-            android:id="@+id/btn_sendMail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/massageText"
-            android:layout_marginBottom="25dp"
-            android:text="@string/send" />
     </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

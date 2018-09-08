@@ -1,8 +1,8 @@
 package com.example.mystiquecatalogue_android.diconfig;
 
 import com.example.mystiquecatalogue_android.views.MainActivity;
-import com.example.mystiquecatalogue_android.views.contacts.ContactsActivity;
-import com.example.mystiquecatalogue_android.views.contacts.EmailActivity;
+import com.example.mystiquecatalogue_android.views.contacts.map.ContactsActivity;
+import com.example.mystiquecatalogue_android.views.contacts.email.EmailActivity;
 import com.example.mystiquecatalogue_android.views.products.DomesticList.DomesticListActivity;
 import com.example.mystiquecatalogue_android.views.products.DrinksList.DrinksListActivity;
 import com.example.mystiquecatalogue_android.views.products.FoodList.FoodListActivity;
@@ -59,11 +59,15 @@ public abstract class ActivityBindingModule {
     abstract WishListActivity wishListActivity();
 
     @ActivityScoped
-    @ContributesAndroidInjector()
+    @ContributesAndroidInjector(modules = {
+            ContactsModule.class
+    })
     abstract ContactsActivity contactsActivity();
 
     @ActivityScoped
-    @ContributesAndroidInjector()
+    @ContributesAndroidInjector(modules = {
+            EmailModule.class
+    })
     abstract EmailActivity emailActivity();
 
 }
