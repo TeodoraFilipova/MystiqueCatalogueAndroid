@@ -33,6 +33,6 @@
     <string name="domestic_description">domestic_description</string>
     <string name="welcome_title">Welcome!</string>
     <string name="product_description">product_description</string>
-    <string name="product_already_in_wish_list">This product has already been added to the Wish List!</string>
+    <string name="product_already_in_wish_list">The product is already in Wish List!</string>
 
 </resources>

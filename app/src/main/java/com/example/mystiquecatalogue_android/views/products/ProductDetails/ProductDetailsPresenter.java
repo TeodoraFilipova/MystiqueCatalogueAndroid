@@ -48,7 +48,6 @@ public class ProductDetailsPresenter implements ProductDetailsContracts.Presente
 
     @Override
     public void updateProduct() throws Exception {
-
         Disposable observable = Observable
                 .create((ObservableOnSubscribe<Product>) emitter -> {
                     Product newProduct = mProductsService.getDetailsById(mProductId);
