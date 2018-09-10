@@ -34,5 +34,6 @@
     <string name="welcome_title">Welcome!</string>
     <string name="product_description">product_description</string>
     <string name="product_already_in_wish_list">The product is already in Wish List!</string>
+    <string name="wish_list_title">WISH LIST</string>
 
 </resources>
