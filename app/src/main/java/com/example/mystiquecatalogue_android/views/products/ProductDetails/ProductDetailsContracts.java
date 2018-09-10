@@ -25,5 +25,5 @@ public interface ProductDetailsContracts {
         void updateProduct() throws Exception;
 
         void setProductId(int id);
-    }
+        }
 }

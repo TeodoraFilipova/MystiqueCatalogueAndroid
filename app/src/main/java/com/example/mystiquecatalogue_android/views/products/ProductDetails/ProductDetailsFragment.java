@@ -46,6 +46,9 @@ public class ProductDetailsFragment extends Fragment implements ProductDetailsCo
     @BindView(R.id.button_add_to_wish_list)
     Button mAddToWishListButton;
 
+    @BindView(R.id.tv_already_in_wish_list)
+    TextView mAlreadyInWishListTextView;
+
     @Inject
     public ProductDetailsFragment() {
         // Required empty public constructor
@@ -80,15 +83,22 @@ public class ProductDetailsFragment extends Fragment implements ProductDetailsCo
                 .load(product.getImageUrl())
                 .into(mDetailsProductImageView);
 
-        mAddToWishListButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
+        showWishListStatus(product.getBought());
+    }
+
+    private void showWishListStatus(int boughtStatus) {
+        if (boughtStatus == 0) {
+            mAddToWishListButton.setOnClickListener(v -> {
                 try {
                     mPresenter.updateProduct();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-            }
-        });
+            });
+        } else {
+            mAddToWishListButton.setVisibility(View.GONE);
+            mAlreadyInWishListTextView.setVisibility(View.VISIBLE);
+        }
     }
 
     @Override
