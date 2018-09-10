@@ -15,12 +15,6 @@
             android:layout_height="match_parent"
             android:visibility="gone" />
 
-        <EditText
-            android:id="@+id/et_filter_search"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter to search" />
-
         <android.support.v7.widget.RecyclerView
             android:id="@+id/lv_drinks"
             android:layout_width="match_parent"

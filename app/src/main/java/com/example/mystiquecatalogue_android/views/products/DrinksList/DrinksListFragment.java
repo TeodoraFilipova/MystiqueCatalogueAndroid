@@ -23,9 +23,6 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnTextChanged;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class DrinksListFragment extends Fragment implements DrinksListContracts.View,
         DrinksAdapter.OnDrinkClickListener {
 

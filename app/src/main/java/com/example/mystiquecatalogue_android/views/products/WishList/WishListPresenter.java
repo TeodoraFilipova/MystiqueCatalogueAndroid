@@ -44,21 +44,6 @@ public class WishListPresenter implements WishListContracts.Presenter {
                     .subscribe(this::presentWishToView, error -> mView.showError(error));
         }
 
- /*       @Override
-        public void filterProducts(String pattern) {
-            mView.showLoading();
-            Disposable observable = Observable
-                    .create((ObservableOnSubscribe<List<Product>>) emitter -> {
-                        List<Product> wished_products = mProductsService.getFilteredProductsByCategory(pattern, PRODUCT_CATEGORY);
-                        emitter.onNext(drinks);
-                        emitter.onComplete();
-                    })
-                    .subscribeOn(mSchedulerProvider.background())
-                    .observeOn(mSchedulerProvider.ui())
-                    .doFinally(mView::hideLoading)
-                    .subscribe(this::presentDrinksToView, error -> mView.showError(error));
-        }
-*/
         @Override
         public void selectProduct(Product product) {
             mView.showProductsDetails(product);

@@ -28,8 +28,6 @@ public interface WishListContracts {
 
         void loadProducts();
 
- //       void filterProducts(String pattern);
-
         void selectProduct(Product product);
     }
 

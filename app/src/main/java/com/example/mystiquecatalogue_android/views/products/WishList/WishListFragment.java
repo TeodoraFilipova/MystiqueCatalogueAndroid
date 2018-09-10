@@ -24,9 +24,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnTextChanged;
 
-/**
- * A simple {@link Fragment} subclass.
- */
+
 public class WishListFragment extends Fragment implements WishListContracts.View,
         WishAdapter.OnWishClickListener {
 
@@ -34,9 +32,6 @@ public class WishListFragment extends Fragment implements WishListContracts.View
 
     @BindView(R.id.loading_bar)
     ProgressBar mLoadingBar;
-
-    @BindView(R.id.et_filter_search)
-    EditText mEditSearchText;
 
     @BindView(R.id.lv_drinks)
     RecyclerView mWishView;
@@ -128,9 +123,4 @@ public class WishListFragment extends Fragment implements WishListContracts.View
         mPresenter.selectProduct(wishproduct);
     }
 
-/*    @OnTextChanged(R.id.et_filter_search)
-    public void onTextChanged() {
-        String pattern = mEditSearchText.getText().toString();
-        mPresenter.filterProducts(pattern);
-    }*/
 }

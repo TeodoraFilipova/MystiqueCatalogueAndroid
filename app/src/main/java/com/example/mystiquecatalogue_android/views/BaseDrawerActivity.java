@@ -30,9 +30,7 @@ public abstract class BaseDrawerActivity extends DaggerAppCompatActivity {
 
     }
 
-
     public void setupDrawer() {
-        //if you want to update the items at a later timeit is recommended to keep it in a variable
         PrimaryDrawerItem mainItem = new PrimaryDrawerItem()
                 .withIdentifier(MainActivity.IDENTIFIER)
                 .withName("Main Page")
@@ -62,7 +60,6 @@ public abstract class BaseDrawerActivity extends DaggerAppCompatActivity {
                 .withName("Contacts")
                 .withIcon(R.drawable.icon_contacts);
 
-        //create the drawer and remember the `Drawer` result object
         DrawerBuilder drawerBuilder = new DrawerBuilder();
         drawerBuilder.withActivity(this);
         drawerBuilder.withToolbar(mToolbar);
@@ -81,6 +78,7 @@ public abstract class BaseDrawerActivity extends DaggerAppCompatActivity {
                 new DividerDrawerItem(),
                 contactItem
         );
+
         drawerBuilder.withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
             @Override
             public boolean onItemClick(

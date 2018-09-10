@@ -72,11 +72,11 @@ public class HttpProductsService implements ProductsService {
     }
 
     @Override
-    public Product createProduct(Product superhero) throws Exception {
-        if (!mProductValidator.isValid(superhero)) {
+    public Product createProduct(Product product) throws Exception {
+        if (!mProductValidator.isValid(product)) {
             throw new IllegalArgumentException("Product is invalid");
         }
 
-        return mProductsRepository.add(superhero);
+        return mProductsRepository.add(product);
     }
 }

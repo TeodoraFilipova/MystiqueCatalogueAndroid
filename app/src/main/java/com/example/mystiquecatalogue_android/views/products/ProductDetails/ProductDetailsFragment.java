@@ -21,17 +21,12 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class ProductDetailsFragment extends Fragment implements ProductDetailsContracts.View {
     private ProductDetailsContracts.Presenter mPresenter;
 
     @BindView(R.id.tv_details_name)
     TextView mDetailsNameTextView;
 
-/*    @BindView(R.id.tv_details_category)
-    TextView mDetailsCategoryTextView;*/
 
     @BindView(R.id.tv_details_type)
     TextView mDetailsTypeTextView;
@@ -45,9 +40,6 @@ public class ProductDetailsFragment extends Fragment implements ProductDetailsCo
     @BindView(R.id.tv_details_price)
     TextView mDetailsPriceTextView;
 
-  /*  @BindView(R.id.tv_details_number)
-    TextView mDetailsNumberTextView;
-*/
     @BindView(R.id.iv_detailspic)
     ImageView mDetailsProductImageView;
 
@@ -63,7 +55,6 @@ public class ProductDetailsFragment extends Fragment implements ProductDetailsCo
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_product_details, container, false);
 
         ButterKnife.bind(this, view);
@@ -81,12 +72,10 @@ public class ProductDetailsFragment extends Fragment implements ProductDetailsCo
     @Override
     public void showProduct(Product product) {
         mDetailsNameTextView.setText(product.getName());
-//        mDetailsCategoryTextView.setText(product.getCategory());
         mDetailsTypeTextView.setText(product.getType());
         mDetailsUnitsTextView.setText(product.getUnits());
         mDetailsSizeTextView.setText(String.valueOf(product.getSize()));
         mDetailsPriceTextView.setText(String.valueOf(product.getPrice()));
-//        mDetailsNumberTextView.setText(String.valueOf(product.getNumber()));
         Picasso.get()
                 .load(product.getImageUrl())
                 .into(mDetailsProductImageView);

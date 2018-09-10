@@ -34,7 +34,6 @@ public class ProductDetailsPresenter implements ProductDetailsContracts.Presente
 
     @Override
     public void loadProduct() {
-        mView.showLoading();
         Disposable observable = Observable
                 .create((ObservableOnSubscribe<Product>) emitter -> {
                     Product product = mProductsService.getDetailsById(mProductId);

@@ -77,12 +77,6 @@ public class DrinksAdapter extends RecyclerView.Adapter<DrinksAdapter.DrinksView
         @BindView(R.id.tv_drinkname)
         TextView mNameTextView;
 
- /*       @BindView(R.id.tv_category)
-        TextView mCategoryTextView;
-*/
-       /* @BindView(R.id.tv_type)
-        TextView mTypeTextView;
-*/
         @BindView(R.id.tv_drinksize)
         TextView mSizeTextView;
 
@@ -92,8 +86,6 @@ public class DrinksAdapter extends RecyclerView.Adapter<DrinksAdapter.DrinksView
         @BindView(R.id.tv_drinkprice)
         TextView mPriceTextView;
 
-       /* @BindView(R.id.tv_number)
-        TextView mNumberTextView;*/
 
         @BindView(R.id.iv_drinks)
         ImageView mDrinkImageView;
@@ -108,11 +100,8 @@ public class DrinksAdapter extends RecyclerView.Adapter<DrinksAdapter.DrinksView
 
         void bind(Product drink) {
             mNameTextView.setText(drink.getName());
-//            mCategoryTextView.setText(drink.getCategory());
-//            mTypeTextView.setText(drink.getType());
             mUnitsTextView.setText(drink.getUnits());
             mSizeTextView.setText(String.valueOf(drink.getSize()));
-//            mNumberTextView.setText(String.valueOf(drink.getNumber()));
             mPriceTextView.setText(String.valueOf(drink.getPrice()));
             Picasso.get()
                     .load(drink.getImageUrl())

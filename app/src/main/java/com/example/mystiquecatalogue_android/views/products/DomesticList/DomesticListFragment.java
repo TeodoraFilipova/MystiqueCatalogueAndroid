@@ -23,9 +23,6 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnTextChanged;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class DomesticListFragment extends Fragment
         implements DomesticListContracts.View, DomesticAdapter.OnDomesticClickListener {
 
@@ -55,7 +52,6 @@ public class DomesticListFragment extends Fragment
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_domestic_list, container, false);
 
         ButterKnife.bind(this, view);

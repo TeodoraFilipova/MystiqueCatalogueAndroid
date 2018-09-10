@@ -76,20 +76,11 @@ public class DomesticAdapter extends RecyclerView.Adapter<DomesticAdapter.Domest
         @BindView(R.id.tv_domesticname)
         TextView mNameTextView;
 
-       /* @BindView(R.id.tv_domesticcategory)
-        TextView mCategoryTextView;
-
-        @BindView(R.id.tv_domestictype)
-        TextView mTypeTextView;*/
-
         @BindView(R.id.tv_domesticsize)
         TextView mSizeTextView;
 
         @BindView(R.id.tv_domesticunits)
         TextView mUnitsTextView;
-
-        /*@BindView(R.id.tv_number)
-        TextView mNumberTextView;*/
 
         @BindView(R.id.tv_domesticprice)
         TextView mPriceTextView;
@@ -107,13 +98,8 @@ public class DomesticAdapter extends RecyclerView.Adapter<DomesticAdapter.Domest
 
         void bind(Product domestic) {
             mNameTextView.setText(domestic.getName());
-//            mCategoryTextView.setText(domestic.getCategory());
-//            mTypeTextView.setText(domestic.getType());
-
             mSizeTextView.setText(String.valueOf(domestic.getSize()));
-
             mUnitsTextView.setText(domestic.getUnits());
-//            mNumberTextView.setText(String.valueOf(domestic.getNumber()));
             mPriceTextView.setText(String.valueOf(domestic.getPrice()));
 
             Picasso.get()
