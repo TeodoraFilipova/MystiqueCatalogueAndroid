@@ -131,5 +131,4 @@ public class ProductsListFragment extends Fragment implements ProductsListContra
         String pattern = mSearchFilterText.getText().toString();
         mPresenter.filterProducts(pattern);
     }
-
 }

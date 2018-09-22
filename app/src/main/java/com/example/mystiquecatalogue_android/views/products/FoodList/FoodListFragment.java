@@ -130,4 +130,5 @@ public class FoodListFragment extends Fragment implements FoodListContracts.View
         String pattern = mEditSearchText.getText().toString();
         mPresenter.filterProducts(pattern);
     }
+
 }

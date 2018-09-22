@@ -1,14 +1,11 @@
 package com.example.mystiquecatalogue_android.views.products.FoodList;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.mystiquecatalogue_android.R;
 import com.example.mystiquecatalogue_android.models.Product;
 import com.example.mystiquecatalogue_android.views.BaseDrawerActivity;
-import com.example.mystiquecatalogue_android.views.products.DrinksList.DrinksListContracts;
-import com.example.mystiquecatalogue_android.views.products.DrinksList.DrinksListFragment;
 import com.example.mystiquecatalogue_android.views.products.ProductDetails.ProductDetailsActivity;
 
 import javax.inject.Inject;
@@ -16,7 +13,8 @@ import javax.inject.Inject;
 import butterknife.ButterKnife;
 
 public class FoodListActivity extends BaseDrawerActivity
-        implements FoodListContracts.Navigator {
+        implements FoodListContracts.Navigator
+{
 
     public static final long IDENTIFIER = 46;
 
@@ -25,8 +23,6 @@ public class FoodListActivity extends BaseDrawerActivity
 
     @Inject
     FoodListContracts.Presenter mPresenter;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +39,6 @@ public class FoodListActivity extends BaseDrawerActivity
         getFragmentManager().beginTransaction()
                 .replace(R.id.content, mFoodListFragment)
                 .commit();
-
     }
 
     @Override
