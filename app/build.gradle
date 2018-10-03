@@ -20,6 +20,7 @@ android {
         targetCompatibility 1.8
         sourceCompatibility 1.8
     }
+    repositories { jcenter() }
 }
 
 dependencies {
@@ -65,6 +66,12 @@ dependencies {
     implementation 'io.reactivex.rxjava2:rxjava:2.2.1'
 
     implementation 'com.squareup.picasso:picasso:2.71828'
+
+    // JUnit
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    // Mockito
+    testCompile "org.mockito:mockito-core:2.22.0"
 }
 
 apply plugin: 'com.google.gms.google-services'
