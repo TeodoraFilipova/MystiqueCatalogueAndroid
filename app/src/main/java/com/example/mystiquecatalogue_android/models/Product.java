@@ -18,7 +18,8 @@ public class Product implements Serializable {
         //empty constructor
     }
 
-    public Product(String imageUrl, String name, String category, int id, String type, String units, int size, int number, double price, int bought) {
+    public Product(String imageUrl, String name, String category, int id, String type, String units,
+                   int size, int number, double price, int bought) {
         this.imageUrl = imageUrl;
         this.name = name;
         this.category = category;
